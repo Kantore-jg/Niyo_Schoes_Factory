@@ -100,18 +100,9 @@ export const products = [
     category: 'femme',
     name: 'Niyo Summer Femme',
     description: 'Légèreté et confort pour les journées ensoleillées, finition dorée.',
-    image: 'https://ik.imagekit.io/cy3dy3vcm/Niyo/WhatsApp%20Unknown%202026-07-06%20at%208.07.37%20PM/WhatsApp%20Image%202026-07-06%20at%203.04.15%20PM.jpeg?updatedAt=1783361919254',
+    image: 'https://scontent.fnbo19-1.fna.fbcdn.net/v/t39.30808-6/476281320_1120268489793906_2065771755404960301_n.jpg?stp=dst-jpg_tt6&cstp=mx720x478&ctp=s720x478&_nc_cat=103&ccb=1-7&_nc_sid=833d8c&_nc_ohc=dZJmkOogM3EQ7kNvwHhAK7r&_nc_oc=Adr6uLA4SJthZGm-uByAA4_EmuZ6Wc843h079_EFLNyxweiGvE4wCr3FMbaJTV7nUIM&_nc_zt=23&_nc_ht=scontent.fnbo19-1.fna&_nc_gid=GNMKCdyruP8hmm3HpEpVZQ&_nc_ss=7b2a8&oh=00_AQApqnl55zHr98gp8Y6twoUyn-ayWLwAz0dTqK-v5aqvTA&oe=6A52AB1E',
     colors: ['Blanc', 'Or', 'Rose poudré', 'Noir'],
     sizes: ['35', '36', '37', '38', '39', '40'],
-  },
-  {
-    id: 6,
-    category: 'femme',
-    name: 'Niyo Premium Femme',
-    description: 'Collection premium avec ornements dorés et cuir nappa souple.',
-    image: 'https://ik.imagekit.io/cy3dy3vcm/Niyo/WhatsApp%20Unknown%202026-07-06%20at%208.07.37%20PM/WhatsApp%20Image%202026-07-06%20at%203.05.44%20PM.jpeg?updatedAt=1783361919544',
-    colors: ['Noir', 'Bordeaux', 'Camel', 'Or'],
-    sizes: ['36', '37', '38', '39', '40', '41'],
   },
 ]
 

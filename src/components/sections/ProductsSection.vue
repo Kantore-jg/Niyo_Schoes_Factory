@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
 import { categories, products } from '../../data/data.js'
 import { useWhatsApp } from '../../composables/useWhatsApp.js'
 import SectionTitle from '../ui/SectionTitle.vue'
@@ -7,8 +7,13 @@ import SectionTitle from '../ui/SectionTitle.vue'
 const { openWhatsApp } = useWhatsApp()
 const activeCategory = ref('homme')
 
-const filteredProducts = () =>
+const filteredProducts = computed(() =>
   products.filter((p) => p.category === activeCategory.value)
+)
+
+const setCategory = (slug) => {
+  activeCategory.value = slug
+}
 </script>
 
 <template>
@@ -25,18 +30,18 @@ const filteredProducts = () =>
           :key="cat.id"
           class="products__tab"
           :class="{ 'products__tab--active': activeCategory === cat.slug }"
-          @click="activeCategory = cat.slug"
+          @click="setCategory(cat.slug)"
         >
           {{ cat.label }}
         </button>
       </div>
 
-      <div class="products__grid">
+      <div :key="activeCategory" class="products__grid">
         <article
-          v-for="(product, i) in filteredProducts()"
+          v-for="(product, i) in filteredProducts"
           :key="product.id"
-          class="products__card animate-on-scroll"
-          :style="{ transitionDelay: `${i * 0.1}s` }"
+          class="products__card"
+          :style="{ animationDelay: `${i * 0.08}s` }"
         >
           <div class="products__card-image">
             <img :src="product.image" :alt="product.name" loading="lazy" />
@@ -62,6 +67,10 @@ const filteredProducts = () =>
             </button>
           </div>
         </article>
+
+        <p v-if="filteredProducts.length === 0" class="products__empty">
+          Aucun produit disponible dans cette catégorie pour le moment.
+        </p>
       </div>
     </div>
   </section>
@@ -110,11 +119,19 @@ const filteredProducts = () =>
     }
   }
 
+  &__empty {
+    grid-column: 1 / -1;
+    text-align: center;
+    color: rgba($color-text, 0.6);
+    padding: 48px 24px;
+  }
+
   &__card {
     background: $color-white;
     border-radius: $radius-lg;
     overflow: hidden;
     box-shadow: $shadow-sm;
+    animation: productFadeIn 0.4s ease both;
     @include hover-lift;
   }
 
@@ -177,6 +194,17 @@ const filteredProducts = () =>
   &__sizes-label {
     font-weight: 600;
     color: $color-text;
+  }
+}
+
+@keyframes productFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 </style>
