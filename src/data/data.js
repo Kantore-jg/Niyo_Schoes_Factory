@@ -62,7 +62,7 @@ export const products = [
   {
     id: 1,
     category: 'homme',
-    name: 'Niyo Classic Homme',
+    name: 'Sandales Homme',
     description: 'Sandale en cuir pleine fleur avec semelle anatomique et finitions main.',
     image: 'https://ik.imagekit.io/cy3dy3vcm/Niyo/WhatsApp%20Unknown%202026-07-06%20at%208.07.37%20PM/WhatsApp%20Image%202026-07-06%20at%203.00.58%20PM.jpeg?updatedAt=1783361918956',
     colors: ['Marron', 'Noir', 'Cognac'],
@@ -71,7 +71,7 @@ export const products = [
   {
     id: 2,
     category: 'homme',
-    name: 'Niyo Urban Homme',
+    name: 'PAEEJ',
     description: 'Design contemporain avec bride croisée et semelle antidérapante.',
     image: 'https://ik.imagekit.io/cy3dy3vcm/Niyo/WhatsApp%20Unknown%202026-07-06%20at%208.07.37%20PM/WhatsApp%20Image%202026-07-06%20at%203.02.24%20PM.jpeg?updatedAt=1783361918630',
     colors: ['Noir', 'Brun foncé', 'Sable'],
@@ -80,7 +80,7 @@ export const products = [
   {
     id: 3,
     category: 'homme',
-    name: 'Niyo Artisan Homme',
+    name: 'Femmes & Hommes',
     description: 'Modèle artisanal avec coutures visibles et cuir vieilli naturellement.',
     image: 'https://ik.imagekit.io/cy3dy3vcm/Niyo/WhatsApp%20Unknown%202026-07-06%20at%208.07.37%20PM/WhatsApp%20Image%202026-07-06%20at%203.01.35%20PM.jpeg?updatedAt=1783361918287',
     colors: ['Cognac', 'Marron', 'Noir'],
@@ -204,15 +204,8 @@ export const gallery = {
     { id: 1, category: 'produits', src: 'https://ik.imagekit.io/cy3dy3vcm/Niyo/WhatsApp%20Unknown%202026-07-06%20at%208.07.37%20PM/WhatsApp%20Image%202026-07-06%20at%203.02.24%20PM.jpeg?updatedAt=1783361918630', alt: 'Sandale femme élégante' },
     { id: 2, category: 'produits', src: 'https://ik.imagekit.io/cy3dy3vcm/Niyo/WhatsApp%20Unknown%202026-07-06%20at%208.07.37%20PM/WhatsApp%20Image%202026-07-06%20at%203.01.35%20PM.jpeg?updatedAt=1783361918287', alt: 'Sandale homme classique' },
     { id: 3, category: 'fabrication', src: 'https://ik.imagekit.io/cy3dy3vcm/Niyo/WhatsApp%20Unknown%202026-07-06%20at%208.07.44%20PM/WhatsApp%20Image%202026-07-06%20at%203.03.11%20PM.jpeg?updatedAt=1783361918949', alt: 'Processus de fabrication' },
-    { id: 4, category: 'atelier', src: 'https://ik.imagekit.io/cy3dy3vcm/Niyo/WhatsApp%20Unknown%202026-07-06%20at%208.07.37%20PM/WhatsApp%20Image%202026-07-06%20at%203.04.15%20PM.jpeg?updatedAt=1783361919254', alt: 'Atelier de production' },
-    { id: 5, category: 'atelier', src: 'https://ik.imagekit.io/cy3dy3vcm/Niyo/WhatsApp%20Unknown%202026-07-06%20at%208.07.37%20PM/WhatsApp%20Image%202026-07-06%20at%203.05.44%20PM.jpeg?updatedAt=1783361919544', alt: 'Machines de couture' },
-    { id: 6, category: 'evenements', src: 'https://ik.imagekit.io/cy3dy3vcm/Niyo/WhatsApp%20Unknown%202026-07-06%20at%208.07.37%20PM/WhatsApp%20Image%202026-07-06%20at%203.06.12%20PM.jpeg?updatedAt=1783361919844', alt: 'Salon professionnel' },
-    { id: 7, category: 'evenements', src: 'https://ik.imagekit.io/cy3dy3vcm/Niyo/WhatsApp%20Unknown%202026-07-06%20at%208.07.37%20PM/WhatsApp%20Image%202026-07-06%20at%203.06.45%20PM.jpeg?updatedAt=1783361920144', alt: 'Défilé de mode' },
-    { id: 8, category: 'equipe', src: 'https://ik.imagekit.io/cy3dy3vcm/Niyo/WhatsApp%20Unknown%202026-07-06%20at%208.07.37%20PM/WhatsApp%20Image%202026-07-06%20at%203.07.15%20PM.jpeg?updatedAt=1783361920444', alt: 'Équipe de production' },
     { id: 9, category: 'produits', src: 'https://ik.imagekit.io/cy3dy3vcm/Niyo/WhatsApp%20Unknown%202026-07-06%20at%208.07.37%20PM/WhatsApp%20Image%202026-07-06%20at%203.00.58%20PM.jpeg?updatedAt=1783361918956', alt: 'Collection été' },
     { id: 10, category: 'fabrication', src: 'https://ik.imagekit.io/cy3dy3vcm/Niyo/WhatsApp%20Unknown%202026-07-06%20at%208.07.37%20PM/WhatsApp%20Image%202026-07-06%20at%203.01.35%20PM.jpeg?updatedAt=1783361918287', alt: 'Finitions main' },
-    { id: 11, category: 'atelier', src: 'https://ik.imagekit.io/cy3dy3vcm/Niyo/WhatsApp%20Unknown%202026-07-06%20at%208.07.37%20PM/WhatsApp%20Image%202026-07-06%20at%203.04.15%20PM.jpeg?updatedAt=1783361919254', alt: 'Stockage cuir' },
-    { id: 12, category: 'equipe', src: 'https://ik.imagekit.io/cy3dy3vcm/Niyo/WhatsApp%20Unknown%202026-07-06%20at%208.07.37%20PM/WhatsApp%20Image%202026-07-06%20at%203.07.15%20PM.jpeg?updatedAt=1783361920444', alt: 'Artisan au travail' },
   ],
 }
 
