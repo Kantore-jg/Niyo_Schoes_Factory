@@ -9,7 +9,7 @@ export const company = {
 
 export const hero = {
   backgroundImage:
-    'https://ik.imagekit.io/cy3dy3vcm/Niyo/WhatsApp%20Unknown%202026-07-06%20at%208.07.44%20PM/WhatsApp%20Image%202026-07-06%20at%203.04.34%20PM.jpeg?updatedAt=1783361918159',
+    'https://ik.imagekit.io/cy3dy3vcm/Niyo/WhatsApp%20Unknown%202026-07-06%20at%208.07.44%20PM/WhatsApp%20Image%202026-07-06%20at%203.03.11%20PM.jpeg?updatedAt=1783361918949',
   title: 'Niyo Shoes Factory',
   subtitle: 'L\'art du cuir, l\'élégance à vos pieds',
   description:

@@ -73,23 +73,25 @@ onUnmounted(() => {
     will-change: transform;
   }
 
-  &__overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(
-      135deg,
-      rgba(59, 36, 23, 0.75) 0%,
-      rgba(59, 36, 23, 0.45) 50%,
-      rgba(59, 36, 23, 0.65) 100%
-    );
-  }
+  // &__overlay {
+  //   position: absolute;
+  //   inset: 0;
+  //   background: linear-gradient(
+  //     135deg,
+  //     rgba(59, 36, 23, 0.75) 0%,
+  //     rgba(59, 36, 23, 0.45) 50%,
+  //     rgba(59, 36, 23, 0.65) 100%
+  //   );
+  // }
 
   &__content {
+    font-weight: bold;
     position: relative;
     z-index: 2;
     text-align: center;
     color: $color-white;
     max-width: 800px;
+    max-height: 500px;
     padding: 0 24px;
     animation: heroFade 1.2s ease;
   }
@@ -108,7 +110,7 @@ onUnmounted(() => {
   &__subtitle {
     font-family: $font-heading;
     font-size: clamp(1.1rem, 2.5vw, 1.5rem);
-    font-style: italic;
+    font-style: bold,italic;
     color: $color-accent;
     margin-bottom: 24px;
   }
