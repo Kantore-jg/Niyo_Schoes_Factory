@@ -1,0 +1,176 @@
+@use 'sass:color';
+@use 'variables' as *;
+@use 'mixins' as *;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: $font-body;
+  color: $color-text;
+  background-color: $color-bg;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-heading;
+  font-weight: 600;
+  line-height: 1.2;
+  color: $color-primary;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button {
+  font-family: $font-button;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+.section {
+  @include section-padding;
+}
+
+.container {
+  @include container;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 64px;
+
+  &__label {
+    display: inline-block;
+    font-family: $font-button;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: $color-accent;
+    margin-bottom: 12px;
+  }
+
+  &__heading {
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin-bottom: 16px;
+  }
+
+  &__subtitle {
+    font-size: 1.1rem;
+    color: $color-secondary;
+    max-width: 600px;
+    margin: 0 auto;
+    font-weight: 300;
+  }
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: $font-button;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 14px 32px;
+  border-radius: $radius-sm;
+  transition: all $transition;
+  letter-spacing: 0.5px;
+
+  &--primary {
+    background: $color-primary;
+    color: $color-white;
+
+    &:hover {
+      background: color.adjust($color-primary, $lightness: -8%);
+      transform: translateY(-2px);
+      box-shadow: $shadow-md;
+    }
+  }
+
+  &--secondary {
+    background: transparent;
+    color: $color-white;
+    border: 2px solid rgba(255, 255, 255, 0.6);
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.15);
+      border-color: $color-white;
+    }
+  }
+
+  &--accent {
+    background: $color-accent;
+    color: $color-white;
+
+    &:hover {
+      background: color.adjust($color-accent, $lightness: -8%);
+      transform: translateY(-2px);
+      box-shadow: $shadow-md;
+    }
+  }
+
+  &--whatsapp {
+    background: $color-success;
+    color: $color-white;
+
+    &:hover {
+      background: color.adjust($color-success, $lightness: -8%);
+      transform: translateY(-2px);
+      box-shadow: $shadow-md;
+    }
+  }
+
+  &--outline {
+    background: transparent;
+    color: $color-primary;
+    border: 2px solid $color-primary;
+
+    &:hover {
+      background: $color-primary;
+      color: $color-white;
+    }
+  }
+}
+
+.animate-on-scroll {
+  @include fade-in-up;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

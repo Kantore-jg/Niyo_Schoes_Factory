@@ -1,0 +1,256 @@
+<script setup>
+import { ref, onMounted, onUnmounted } from 'vue'
+import { company, navigation } from '../../data/data.js'
+import { useActiveSection } from '../../composables/useActiveSection.js'
+
+const { activeSection } = useActiveSection()
+const isScrolled = ref(false)
+const isMenuOpen = ref(false)
+
+const handleScroll = () => {
+  isScrolled.value = window.scrollY > 50
+}
+
+const toggleMenu = () => {
+  isMenuOpen.value = !isMenuOpen.value
+  document.body.style.overflow = isMenuOpen.value ? 'hidden' : ''
+}
+
+const closeMenu = () => {
+  isMenuOpen.value = false
+  document.body.style.overflow = ''
+}
+
+onMounted(() => {
+  window.addEventListener('scroll', handleScroll, { passive: true })
+  handleScroll()
+})
+
+onUnmounted(() => {
+  window.removeEventListener('scroll', handleScroll)
+  document.body.style.overflow = ''
+})
+</script>
+
+<template>
+  <header
+    class="navbar"
+    :class="{ 'navbar--scrolled': isScrolled, 'navbar--open': isMenuOpen }"
+    role="banner"
+  >
+    <div class="navbar__inner container">
+      <a href="#accueil" class="navbar__logo" @click="closeMenu">
+        <img :src="company.logo" :alt="company.name" class="navbar__logo-img" />
+      </a>
+
+      <nav class="navbar__nav" role="navigation" aria-label="Navigation principale">
+        <ul class="navbar__list">
+          <li v-for="item in navigation" :key="item.id">
+            <a
+              :href="item.href"
+              class="navbar__link"
+              :class="{ 'navbar__link--active': activeSection === item.id }"
+              @click="closeMenu"
+            >
+              {{ item.label }}
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <button
+        class="navbar__toggle"
+        :aria-expanded="isMenuOpen"
+        aria-label="Menu de navigation"
+        @click="toggleMenu"
+      >
+        <span class="navbar__toggle-bar" />
+        <span class="navbar__toggle-bar" />
+        <span class="navbar__toggle-bar" />
+      </button>
+    </div>
+
+    <div class="navbar__mobile" :class="{ 'navbar__mobile--open': isMenuOpen }">
+      <ul class="navbar__mobile-list">
+        <li v-for="item in navigation" :key="item.id">
+          <a
+            :href="item.href"
+            class="navbar__mobile-link"
+            :class="{ 'navbar__mobile-link--active': activeSection === item.id }"
+            @click="closeMenu"
+          >
+            {{ item.label }}
+          </a>
+        </li>
+      </ul>
+    </div>
+  </header>
+</template>
+
+<style lang="scss" scoped>
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  height: $nav-height;
+  transition: background $transition, box-shadow $transition;
+
+  &--scrolled {
+    @include glass(0.95);
+    box-shadow: $shadow-sm;
+
+    .navbar__link {
+      color: $color-primary;
+    }
+
+    .navbar__toggle-bar {
+      background: $color-primary;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    padding: 0 24px;
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+  }
+
+  &__logo-img {
+    height: 48px;
+    width: auto;
+    object-fit: contain;
+    border-radius: $radius-sm;
+    background: $color-white;
+    padding: 4px 8px;
+    box-shadow: $shadow-sm;
+    transition: transform $transition;
+
+    &:hover {
+      transform: scale(1.02);
+    }
+
+    @include respond-to(mobile) {
+      height: 40px;
+    }
+  }
+
+  &__nav {
+    @include respond-to(mobile) {
+      display: none;
+    }
+  }
+
+  &__list {
+    display: flex;
+    gap: 8px;
+  }
+
+  &__link {
+    font-family: $font-button;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.9);
+    padding: 8px 14px;
+    border-radius: $radius-sm;
+    transition: all $transition;
+    letter-spacing: 0.3px;
+
+    &:hover,
+    &--active {
+      color: $color-accent;
+      background: rgba(200, 155, 60, 0.1);
+    }
+
+    &--active {
+      font-weight: 600;
+    }
+  }
+
+  &__toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    padding: 8px;
+
+    @include respond-to(mobile) {
+      display: flex;
+    }
+  }
+
+  &__toggle-bar {
+    width: 24px;
+    height: 2px;
+    background: $color-white;
+    transition: all $transition;
+    border-radius: 2px;
+  }
+
+  &--open &__toggle-bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  &--open &__toggle-bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  &--open &__toggle-bar:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+
+  &__mobile {
+    display: none;
+    position: fixed;
+    top: $nav-height;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: $color-bg;
+    padding: 32px 24px;
+    transform: translateX(100%);
+    transition: transform $transition;
+
+    @include respond-to(mobile) {
+      display: block;
+    }
+
+    &--open {
+      transform: translateX(0);
+    }
+  }
+
+  &__mobile-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  &__mobile-link {
+    display: block;
+    font-family: $font-button;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: $color-primary;
+    padding: 16px 20px;
+    border-radius: $radius-sm;
+    transition: all $transition;
+
+    &:hover,
+    &--active {
+      background: rgba(200, 155, 60, 0.12);
+      color: $color-accent;
+    }
+  }
+}
+</style>

@@ -1,0 +1,53 @@
+@use 'variables' as *;
+
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == mobile {
+    @media (max-width: $breakpoint-tablet - 1) { @content; }
+  } @else if $breakpoint == tablet {
+    @media (min-width: $breakpoint-tablet) { @content; }
+  } @else if $breakpoint == laptop {
+    @media (min-width: $breakpoint-laptop) { @content; }
+  } @else if $breakpoint == desktop {
+    @media (min-width: $breakpoint-desktop) { @content; }
+  }
+}
+
+@mixin glass($opacity: 0.85) {
+  background: rgba(248, 246, 243, $opacity);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+@mixin section-padding {
+  padding: 100px 24px;
+
+  @include respond-to(mobile) {
+    padding: 72px 20px;
+  }
+}
+
+@mixin container {
+  max-width: $max-width;
+  margin: 0 auto;
+  width: 100%;
+}
+
+@mixin hover-lift {
+  transition: transform $transition, box-shadow $transition;
+
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: $shadow-lg;
+  }
+}
+
+@mixin fade-in-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity $transition-slow, transform $transition-slow;
+
+  &.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

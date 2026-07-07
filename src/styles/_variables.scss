@@ -1,0 +1,31 @@
+$color-primary: #3b2417;
+$color-secondary: #8b5e3c;
+$color-accent: #c89b3c;
+$color-bg: #f8f6f3;
+$color-text: #222222;
+$color-success: #2f6b45;
+$color-white: #ffffff;
+
+$font-heading: 'Playfair Display', Georgia, serif;
+$font-body: 'Poppins', sans-serif;
+$font-button: 'Inter', sans-serif;
+
+$radius-sm: 8px;
+$radius-md: 12px;
+$radius-lg: 20px;
+$radius-xl: 32px;
+
+$shadow-sm: 0 2px 8px rgba(59, 36, 23, 0.08);
+$shadow-md: 0 8px 24px rgba(59, 36, 23, 0.12);
+$shadow-lg: 0 16px 48px rgba(59, 36, 23, 0.16);
+
+$transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+$transition-slow: 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+
+$nav-height: 80px;
+$max-width: 1280px;
+
+$breakpoint-mobile: 480px;
+$breakpoint-tablet: 768px;
+$breakpoint-laptop: 1024px;
+$breakpoint-desktop: 1280px;
