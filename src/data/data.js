@@ -4,7 +4,7 @@ export const company = {
   description:
     'Fabricant de sandales haut de gamme depuis plus de deux décennies, Niyo Shoes Factory allie savoir-faire artisanal et innovation industrielle pour créer des chaussures d\'exception.',
   founded: 2020,
-  logo: '/logo.png',
+  logo: 'logo.png',
 }
 
 export const hero = {
@@ -65,7 +65,7 @@ export const products = [
     category: 'homme',
     name: 'Niyo Classic Homme',
     description: 'Sandale en cuir pleine fleur avec semelle anatomique et finitions main.',
-    image: 'https://images.unsplash.com/photo-1603487748961-7a0e0b0b0b0b?w=600&q=80',
+    image: 'https://ik.imagekit.io/cy3dy3vcm/Niyo/WhatsApp%20Unknown%202026-07-06%20at%208.07.37%20PM/WhatsApp%20Image%202026-07-06%20at%203.00.58%20PM.jpeg?updatedAt=1783361918956',
     colors: ['Marron', 'Noir', 'Cognac'],
     sizes: ['39', '40', '41', '42', '43', '44', '45'],
   },
@@ -74,7 +74,7 @@ export const products = [
     category: 'homme',
     name: 'Niyo Urban Homme',
     description: 'Design contemporain avec bride croisée et semelle antidérapante.',
-    image: 'https://images.unsplash.com/photo-1549298916-b41d501d3772?w=600&q=80',
+    image: 'https://ik.imagekit.io/cy3dy3vcm/Niyo/WhatsApp%20Unknown%202026-07-06%20at%208.07.37%20PM/WhatsApp%20Image%202026-07-06%20at%203.02.24%20PM.jpeg?updatedAt=1783361918630',
     colors: ['Noir', 'Brun foncé', 'Sable'],
     sizes: ['39', '40', '41', '42', '43', '44'],
   },
@@ -92,7 +92,7 @@ export const products = [
     category: 'femme',
     name: 'Niyo Élégance Femme',
     description: 'Sandale féminine raffinée avec talon compensé et brides ajustables.',
-    image: 'https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=600&q=80',
+    image: 'https://ik.imagekit.io/cy3dy3vcm/Niyo/WhatsApp%20Unknown%202026-07-06%20at%208.07.37%20PM/WhatsApp%20Image%202026-07-06%20at%203.02.24%20PM.jpeg?updatedAt=1783361918630',
     colors: ['Nude', 'Noir', 'Bordeaux', 'Or'],
     sizes: ['36', '37', '38', '39', '40', '41'],
   },
@@ -119,43 +119,27 @@ export const products = [
 export const events = [
   {
     id: 1,
-    name: 'Salon International de la Chaussure',
-    date: 'Mars 2024',
-    location: 'Milan, Italie',
-    description: 'Présentation de la collection Premium 2024 devant plus de 500 visiteurs professionnels.',
-    image: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&q=80',
+    name: "Salon International de l'UNFPA",
+    date: 'Janvier 2026',
+    location: 'Bujumbura, Source du Nil',
+    description: 'Présentation de la collection Premium 2026 devant plus de 400 visiteurs professionnels.',
+    image: 'https://scontent.fnbo19-1.fna.fbcdn.net/v/t39.30808-6/601016819_1362397192247700_8280626106810243167_n.jpg?stp=dst-jpg_tt6&cstp=mx780x1040&ctp=s780x1040&_nc_cat=108&ccb=1-7&_nc_sid=833d8c&_nc_ohc=vW8g7-tLS2gQ7kNvwF-d_3y&_nc_oc=AdoqWFpnUMXvmkBIvC9RJD5rq9h7oTZLGkffEVsqYaPyfbUeDJCTHPnsKUswQ-8kPcYKYpL_UXnv8aDaxJNlBAeH&_nc_zt=23&_nc_ht=scontent.fnbo19-1.fna&_nc_gid=69mbjoaVmlDc1xoTW8OeYg&_nc_ss=7b2a8&oh=00_AQD9A5sjUAOHXeFpremygG3fLY_rQOmW3cc0mM4kZNtcCw&oe=6A5280A2',
   },
   {
     id: 2,
     name: 'Foire Artisanale Africaine',
-    date: 'Juin 2023',
-    location: 'Dakar, Sénégal',
+    date: 'Juin 2025',
+    location: 'Gitega, Burundi',
     description: 'Exposition de notre savoir-faire artisanal et démonstrations en direct.',
-    image: 'https://images.unsplash.com/photo-1505373877841-8d25f39d4662?w=600&q=80',
-  },
-  {
-    id: 3,
-    name: 'Expo Mode & Cuir',
-    date: 'Septembre 2023',
-    location: 'Paris, France',
-    description: 'Participation au salon européen de référence pour l\'industrie du cuir.',
-    image: 'https://images.unsplash.com/photo-1557804506-669a67965ba0?w=600&q=80',
-  },
-  {
-    id: 4,
-    name: 'Fashion Week Lagos',
-    date: 'Octobre 2022',
-    location: 'Lagos, Nigeria',
-    description: 'Défilé en collaboration avec des créateurs africains émergents.',
-    image: 'https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=600&q=80',
+    image: 'https://scontent.fnbo19-1.fna.fbcdn.net/v/t39.30808-6/476353308_1120892359731519_6180291981451020554_n.jpg?stp=dst-jpg_tt6&cstp=mx780x1032&ctp=s780x1032&_nc_cat=102&ccb=1-7&_nc_sid=833d8c&_nc_ohc=P2ixO2OR72kQ7kNvwFmVtWj&_nc_oc=Adp5GtwnsmzK0-L-1TlpRM6-2p1abofV2zeFyI9nCZBgVhwMAYhhlWBdaYRcWhH19vHqag4S3vYhjyhRpGEEWclk&_nc_zt=23&_nc_ht=scontent.fnbo19-1.fna&_nc_gid=fustaaz4kpgY0X50YYT6hA&_nc_ss=7b2a8&oh=00_AQB5iB3WmeGptfJMa5R1RaLZ0KF6SaBTlkHXK_7GHSfwEw&oe=6A527EB1',
   },
 ]
 
 export const markets = [
   {
-    id: 'sn',
-    country: 'Sénégal',
-    code: 'SN',
+    id: '1',
+    country: 'Gitega, Burundi',
+    code: 'G001',
     description: 'Marché domestique principal avec un réseau de 25 points de vente.',
     distribution: 'Distributeurs nationaux, boutiques partenaires',
     x: 48,
@@ -219,13 +203,13 @@ export const gallery = {
   ],
   images: [
     { id: 1, category: 'produits', src: 'https://ik.imagekit.io/cy3dy3vcm/Niyo/WhatsApp%20Unknown%202026-07-06%20at%208.07.37%20PM/WhatsApp%20Image%202026-07-06%20at%203.02.24%20PM.jpeg?updatedAt=1783361918630', alt: 'Sandale femme élégante' },
-    { id: 2, category: 'produits', src: 'https://images.unsplash.com/photo-1549298916-b41d501d3772?w=600&q=80', alt: 'Sandale homme classique' },
-    { id: 3, category: 'fabrication', src: 'https://images.unsplash.com/photo-1556906781-95a0d59b1efe?w=600&q=80', alt: 'Processus de fabrication' },
-    { id: 4, category: 'atelier', src: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&q=80', alt: 'Atelier de production' },
-    { id: 5, category: 'atelier', src: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=600&q=80', alt: 'Machines de couture' },
-    { id: 6, category: 'evenements', src: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&q=80', alt: 'Salon professionnel' },
-    { id: 7, category: 'evenements', src: 'https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=600&q=80', alt: 'Défilé de mode' },
-    { id: 8, category: 'equipe', src: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&q=80', alt: 'Équipe Niyo' },
+    { id: 2, category: 'produits', src: 'https://ik.imagekit.io/cy3dy3vcm/Niyo/WhatsApp%20Unknown%202026-07-06%20at%208.07.37%20PM/WhatsApp%20Image%202026-07-06%20at%203.01.35%20PM.jpeg?updatedAt=1783361918287', alt: 'Sandale homme classique' },
+    { id: 3, category: 'fabrication', src: 'https://ik.imagekit.io/cy3dy3vcm/Niyo/WhatsApp%20Unknown%202026-07-06%20at%208.07.44%20PM/WhatsApp%20Image%202026-07-06%20at%203.03.11%20PM.jpeg?updatedAt=1783361918949', alt: 'Processus de fabrication' },
+    { id: 4, category: 'atelier', src: 'https://ik.imagekit.io/cy3dy3vcm/Niyo/WhatsApp%20Unknown%202026-07-06%20at%208.07.37%20PM/WhatsApp%20Image%202026-07-06%20at%203.04.15%20PM.jpeg?updatedAt=1783361919254', alt: 'Atelier de production' },
+    { id: 5, category: 'atelier', src: 'https://ik.imagekit.io/cy3dy3vcm/Niyo/WhatsApp%20Unknown%202026-07-06%20at%208.07.37%20PM/WhatsApp%20Image%202026-07-06%20at%203.05.44%20PM.jpeg?updatedAt=1783361919544', alt: 'Machines de couture' },
+    { id: 6, category: 'evenements', src: 'https://ik.imagekit.io/cy3dy3vcm/Niyo/WhatsApp%20Unknown%202026-07-06%20at%208.07.37%20PM/WhatsApp%20Image%202026-07-06%20at%203.06.12%20PM.jpeg?updatedAt=1783361919844', alt: 'Salon professionnel' },
+    { id: 7, category: 'evenements', src: 'https://ik.imagekit.io/cy3dy3vcm/Niyo/WhatsApp%20Unknown%202026-07-06%20at%208.07.37%20PM/WhatsApp%20Image%202026-07-06%20at%203.06.45%20PM.jpeg?updatedAt=1783361920144', alt: 'Défilé de mode' },
+    { id: 8, category: 'equipe', src: 'https://ik.imagekit.io/cy3dy3vcm/Niyo/WhatsApp%20Unknown%202026-07-06%20at%208.07.37%20PM/WhatsApp%20Image%202026-07-06%20at%203.07.15%20PM.jpeg?updatedAt=1783361920444', alt: 'Équipe de production' },
     { id: 9, category: 'produits', src: 'https://images.unsplash.com/photo-1560769629-975ec94e6a86?w=600&q=80', alt: 'Collection été' },
     { id: 10, category: 'fabrication', src: 'https://images.unsplash.com/photo-1525966222134-fcfa99b8d077?w=600&q=80', alt: 'Finitions main' },
     { id: 11, category: 'atelier', src: 'https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?w=600&q=80', alt: 'Stockage cuir' },
@@ -244,10 +228,10 @@ export const contact = {
 }
 
 export const socialLinks = [
-  { id: 'facebook', label: 'Facebook', url: 'https://facebook.com', icon: 'facebook' },
-  { id: 'instagram', label: 'Instagram', url: 'https://instagram.com', icon: 'instagram' },
-  { id: 'linkedin', label: 'LinkedIn', url: 'https://linkedin.com', icon: 'linkedin' },
-  { id: 'twitter', label: 'Twitter', url: 'https://twitter.com', icon: 'twitter' },
+  { id: 'facebook', label: 'Facebook', url: 'https://www.facebook.com/profile.php?id=100054322970161', icon: 'facebook' },
+  // { id: 'instagram', label: 'Instagram', url: 'https://instagram.com', icon: 'instagram' },
+  // { id: 'linkedin', label: 'LinkedIn', url: 'https://linkedin.com', icon: 'linkedin' },
+  // { id: 'twitter', label: 'Twitter', url: 'https://twitter.com', icon: 'twitter' },
 ]
 
 export const footer = {

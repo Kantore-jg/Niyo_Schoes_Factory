@@ -40,9 +40,9 @@ onUnmounted(() => {
   >
     <div class="navbar__inner container">
       <a href="#accueil" class="navbar__logo" @click="closeMenu">
-        <img :src="company.logo" :alt="company.name" class="navbar__logo-img" />
-      </a>
+        <img :src="company.logo" :alt="company.name" class="navbar__logo-img" /><h3>{{ company.name }}</h3>
 
+      </a>
       <nav class="navbar__nav" role="navigation" aria-label="Navigation principale">
         <ul class="navbar__list">
           <li v-for="item in navigation" :key="item.id">
@@ -132,7 +132,6 @@ onUnmounted(() => {
     width: auto;
     object-fit: contain;
     border-radius: $radius-sm;
-    background: $color-white;
     padding: 4px 8px;
     box-shadow: $shadow-sm;
     transition: transform $transition;

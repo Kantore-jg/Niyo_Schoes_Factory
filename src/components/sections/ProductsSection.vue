@@ -15,7 +15,6 @@ const filteredProducts = () =>
   <section id="produits" class="section products">
     <div class="container">
       <SectionTitle
-        label="Collections"
         title="Nos Produits"
         subtitle="Des sandales d'exception pour hommes et femmes"
       />

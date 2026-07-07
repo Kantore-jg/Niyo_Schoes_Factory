@@ -7,7 +7,6 @@ import SectionTitle from '../ui/SectionTitle.vue'
   <section id="evenements" class="section events">
     <div class="container">
       <SectionTitle
-        label="Présence internationale"
         title="Événements"
         subtitle="Foires, salons et expositions auxquels nous participons"
       />

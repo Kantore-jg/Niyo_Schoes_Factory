@@ -14,7 +14,6 @@ const selectMarket = (market) => {
   <section id="marches" class="section markets">
     <div class="container">
       <SectionTitle
-        label="Présence mondiale"
         title="Nos Marchés"
         subtitle="Des sandales Niyo commercialisées à travers le monde"
       />
