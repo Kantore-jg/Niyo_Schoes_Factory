@@ -19,6 +19,10 @@ const openImage = (image) => {
 const closeLightbox = () => {
   selectedImage.value = null
 }
+
+const setFilter = (id) => {
+  activeFilter.value = id
+}
 </script>
 
 <template>
@@ -35,19 +39,19 @@ const closeLightbox = () => {
           :key="cat.id"
           class="gallery__filter"
           :class="{ 'gallery__filter--active': activeFilter === cat.id }"
-          @click="activeFilter = cat.id"
+          @click="setFilter(cat.id)"
         >
           {{ cat.label }}
         </button>
       </div>
 
-      <div class="gallery__masonry">
+      <div :key="activeFilter" class="gallery__masonry">
         <div
           v-for="(image, i) in filteredImages"
           :key="image.id"
-          class="gallery__item animate-on-scroll"
+          class="gallery__item"
           :class="`gallery__item--${(i % 3) + 1}`"
-          :style="{ transitionDelay: `${(i % 6) * 0.08}s` }"
+          :style="{ animationDelay: `${(i % 6) * 0.06}s` }"
           role="button"
           tabindex="0"
           :aria-label="image.alt"
@@ -59,6 +63,10 @@ const closeLightbox = () => {
             <span>{{ image.alt }}</span>
           </div>
         </div>
+
+        <p v-if="filteredImages.length === 0" class="gallery__empty">
+          Aucune image dans cette catégorie pour le moment.
+        </p>
       </div>
     </div>
 
@@ -108,6 +116,13 @@ const closeLightbox = () => {
     }
   }
 
+  &__empty {
+    column-span: all;
+    text-align: center;
+    color: rgba($color-text, 0.6);
+    padding: 48px 24px;
+  }
+
   &__item {
     break-inside: avoid;
     margin-bottom: 20px;
@@ -115,6 +130,7 @@ const closeLightbox = () => {
     overflow: hidden;
     position: relative;
     cursor: pointer;
+    animation: galleryFadeIn 0.4s ease both;
 
     &--1 img { height: 280px; }
     &--2 img { height: 360px; }
@@ -151,6 +167,17 @@ const closeLightbox = () => {
     .gallery__item:hover & {
       opacity: 1;
     }
+  }
+}
+
+@keyframes galleryFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 </style>

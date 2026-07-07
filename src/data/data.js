@@ -13,7 +13,7 @@ export const hero = {
   title: 'Niyo Shoes Factory',
   subtitle: 'L\'art du cuir, l\'élégance à vos pieds',
   description:
-    'Découvrez l\'excellence de la fabrication de sandales premium, alliant tradition artisanale et design contemporain pour un confort inégalé.',
+    'Découvrez l\'excellence de la fabrication de sandales  , alliant tradition artisanale et design contemporain pour un confort inégalé.',
   ctaPrimary: { label: 'Découvrir nos collections', href: '#produits' },
   ctaSecondary: { label: 'Nous contacter sur WhatsApp', href: '#contact' },
 }
@@ -36,7 +36,7 @@ export const about = {
   mission:
     'Créer des sandales qui allient confort, durabilité et esthétique, en respectant les traditions artisanales tout en intégrant les innovations les plus récentes.',
   vision:
-    'Devenir la marque de référence mondiale pour les sandales en cuir premium, reconnue pour son excellence et son engagement envers la qualité.',
+    'Devenir la marque de référence mondiale pour les sandales en cuir  , reconnue pour son excellence et son engagement envers la qualité.',
   values: [
     {  title: 'Qualité', description: 'Chaque paire est inspectée avec le plus grand soin.' },
     {  title: 'Artisanat', description: 'Un savoir-faire transmis de génération en génération.' },
@@ -112,7 +112,7 @@ export const events = [
     name: "Salon International de l'UNFPA",
     date: 'Janvier 2026',
     location: 'Bujumbura, Source du Nil',
-    description: 'Présentation de la collection Premium 2026 devant plus de 400 visiteurs professionnels.',
+    description: 'Présentation de la collection   2026 devant plus de 400 visiteurs professionnels.',
     image: 'https://scontent.fnbo19-1.fna.fbcdn.net/v/t39.30808-6/601016819_1362397192247700_8280626106810243167_n.jpg?stp=dst-jpg_tt6&cstp=mx780x1040&ctp=s780x1040&_nc_cat=108&ccb=1-7&_nc_sid=833d8c&_nc_ohc=vW8g7-tLS2gQ7kNvwF-d_3y&_nc_oc=AdoqWFpnUMXvmkBIvC9RJD5rq9h7oTZLGkffEVsqYaPyfbUeDJCTHPnsKUswQ-8kPcYKYpL_UXnv8aDaxJNlBAeH&_nc_zt=23&_nc_ht=scontent.fnbo19-1.fna&_nc_gid=69mbjoaVmlDc1xoTW8OeYg&_nc_ss=7b2a8&oh=00_AQD9A5sjUAOHXeFpremygG3fLY_rQOmW3cc0mM4kZNtcCw&oe=6A5280A2',
   },
   {
@@ -208,7 +208,7 @@ export const footer = {
   productLinks: [
     { label: 'Sandales Homme', href: '#produits' },
     { label: 'Sandales Femme', href: '#produits' },
-    { label: 'Collection Premium', href: '#produits' },
+    { label: 'Collection  ', href: '#produits' },
   ],
 }
 
