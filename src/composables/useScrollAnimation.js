@@ -1,9 +1,10 @@
 import { onMounted, onUnmounted } from 'vue'
 
-export function useScrollAnimation() {
+export function useScrollAnimation(selector = '.animate-on-scroll') {
   let observer = null
 
-  onMounted(() => {
+  const observe = () => {
+    observer?.disconnect()
     observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -15,12 +16,16 @@ export function useScrollAnimation() {
       { threshold: 0.15, rootMargin: '0px 0px -40px 0px' }
     )
 
-    document.querySelectorAll('.animate-on-scroll').forEach((el) => {
-      observer.observe(el)
-    })
+    document.querySelectorAll(selector).forEach((el) => observer.observe(el))
+  }
+
+  onMounted(() => {
+    observe()
   })
 
   onUnmounted(() => {
     observer?.disconnect()
   })
+
+  return { observe }
 }

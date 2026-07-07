@@ -63,6 +63,7 @@ const { openWhatsApp } = useWhatsApp()
 
         <div class="contact__map animate-on-scroll">
           <iframe
+            v-if="contact.mapEmbed"
             :src="contact.mapEmbed"
             width="100%"
             height="100%"
@@ -72,6 +73,16 @@ const { openWhatsApp } = useWhatsApp()
             referrerpolicy="no-referrer-when-downgrade"
             title="Localisation Niyo Shoes Factory"
           />
+          <a
+            v-else
+            :href="contact.mapLink"
+            class="contact__map-fallback"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span>Voir notre localisation sur Google Maps</span>
+            <small>{{ contact.address }}</small>
+          </a>
         </div>
       </div>
     </div>
@@ -172,6 +183,35 @@ const { openWhatsApp } = useWhatsApp()
     iframe {
       width: 100%;
       height: 100%;
+    }
+  }
+
+  &__map-fallback {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    height: 100%;
+    background: linear-gradient(135deg, $color-primary, $color-secondary);
+    color: $color-white;
+    text-align: center;
+    padding: 32px;
+    transition: opacity $transition;
+
+    span {
+      font-family: $font-button;
+      font-size: 1rem;
+      font-weight: 600;
+    }
+
+    small {
+      font-size: 0.85rem;
+      opacity: 0.8;
+    }
+
+    &:hover {
+      opacity: 0.92;
     }
   }
 }

@@ -4,12 +4,12 @@ export const company = {
   description:
     'Fabricant de sandales haut de gamme depuis plus de deux décennies, Niyo Shoes Factory allie savoir-faire artisanal et innovation industrielle pour créer des chaussures d\'exception.',
   founded: 2020,
-  logo: 'logo.png',
+  logo: '/logo.png',
 }
 
 export const hero = {
   backgroundImage:
-    'https://scontent.fnbo19-1.fna.fbcdn.net/v/t39.30808-6/677155360_1460929245727827_7329390299645018764_n.jpg?stp=dst-jpg_tt6&cstp=mx2040x1536&ctp=s2040x1536&_nc_cat=108&ccb=1-7&_nc_sid=833d8c&_nc_ohc=9oVYqzOqrX8Q7kNvwGgWVcN&_nc_oc=Ado4D00mnfSPF7aE34vWQ5xQMbujKQY2GgTZANgUz8LZf9JPpx1dSf6NNwZohiXXUOM&_nc_zt=23&_nc_ht=scontent.fnbo19-1.fna&_nc_gid=2b9oz_fpLtYqj8qfY9lgNw&_nc_ss=7b2a8&oh=00_AQBY-xubE3v7Ag5kUkmKWUNGKFgdtAQC4nFjb4G-Cx4aVg&oe=6A51D571',
+    'https://ik.imagekit.io/cy3dy3vcm/Niyo/WhatsApp%20Unknown%202026-07-06%20at%208.07.44%20PM/WhatsApp%20Image%202026-07-06%20at%203.03.11%20PM.jpeg?updatedAt=1783361918949',
   title: 'Niyo Shoes Factory',
   subtitle: 'L\'art du cuir, l\'élégance à vos pieds',
   description:
@@ -20,20 +20,19 @@ export const hero = {
 
 export const navigation = [
   { id: 'accueil', label: 'Accueil', href: '#accueil' },
+  { id: 'apropos', label: 'À propos', href: '#apropos' },
   { id: 'produits', label: 'Produits', href: '#produits' },
   { id: 'evenements', label: 'Événements', href: '#evenements' },
   { id: 'marches', label: 'Marchés', href: '#marches' },
   { id: 'galerie', label: 'Galerie', href: '#galerie' },
   { id: 'contact', label: 'Contact', href: '#contact' },
-  { id: 'apropos', label: 'À propos', href: '#apropos' },
-
 ]
 
 export const about = {
   title: 'À propos de nous',
   subtitle: 'Une histoire de passion et d\'excellence',
   history:
-    'Fondée en 2020, Niyo Shoes Factory est née de la vision d\'un artisan passionné par le cuir et la confection de chaussures. Depuis plus de vingt ans, notre atelier a grandi pour devenir une référence dans la fabrication de sandales de qualité supérieure, exportées dans le monde entier.',
+    'Fondée en 2020 à Gitega, Niyo Shoes Factory est née de la vision d\'un artisan passionné par le cuir et la confection de chaussures. Notre atelier a grandi pour devenir une référence dans la fabrication de sandales de qualité supérieure au Burundi et à l\'international.',
   mission:
     'Créer des sandales qui allient confort, durabilité et esthétique, en respectant les traditions artisanales tout en intégrant les innovations les plus récentes.',
   vision:
@@ -83,7 +82,7 @@ export const products = [
     category: 'homme',
     name: 'Niyo Artisan Homme',
     description: 'Modèle artisanal avec coutures visibles et cuir vieilli naturellement.',
-    image: 'https://images.unsplash.com/photo-1525966222134-fcfa99b8d077?w=600&q=80',
+    image: 'https://ik.imagekit.io/cy3dy3vcm/Niyo/WhatsApp%20Unknown%202026-07-06%20at%208.07.37%20PM/WhatsApp%20Image%202026-07-06%20at%203.01.35%20PM.jpeg?updatedAt=1783361918287',
     colors: ['Cognac', 'Marron', 'Noir'],
     sizes: ['40', '41', '42', '43', '44', '45'],
   },
@@ -101,7 +100,7 @@ export const products = [
     category: 'femme',
     name: 'Niyo Summer Femme',
     description: 'Légèreté et confort pour les journées ensoleillées, finition dorée.',
-    image: 'https://images.unsplash.com/photo-1560769629-975ec94e6a86?w=600&q=80',
+    image: 'https://ik.imagekit.io/cy3dy3vcm/Niyo/WhatsApp%20Unknown%202026-07-06%20at%208.07.37%20PM/WhatsApp%20Image%202026-07-06%20at%203.04.15%20PM.jpeg?updatedAt=1783361919254',
     colors: ['Blanc', 'Or', 'Rose poudré', 'Noir'],
     sizes: ['35', '36', '37', '38', '39', '40'],
   },
@@ -110,7 +109,7 @@ export const products = [
     category: 'femme',
     name: 'Niyo Premium Femme',
     description: 'Collection premium avec ornements dorés et cuir nappa souple.',
-    image: 'https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=600&q=80',
+    image: 'https://ik.imagekit.io/cy3dy3vcm/Niyo/WhatsApp%20Unknown%202026-07-06%20at%208.07.37%20PM/WhatsApp%20Image%202026-07-06%20at%203.05.44%20PM.jpeg?updatedAt=1783361919544',
     colors: ['Noir', 'Bordeaux', 'Camel', 'Or'],
     sizes: ['36', '37', '38', '39', '40', '41'],
   },
@@ -210,21 +209,22 @@ export const gallery = {
     { id: 6, category: 'evenements', src: 'https://ik.imagekit.io/cy3dy3vcm/Niyo/WhatsApp%20Unknown%202026-07-06%20at%208.07.37%20PM/WhatsApp%20Image%202026-07-06%20at%203.06.12%20PM.jpeg?updatedAt=1783361919844', alt: 'Salon professionnel' },
     { id: 7, category: 'evenements', src: 'https://ik.imagekit.io/cy3dy3vcm/Niyo/WhatsApp%20Unknown%202026-07-06%20at%208.07.37%20PM/WhatsApp%20Image%202026-07-06%20at%203.06.45%20PM.jpeg?updatedAt=1783361920144', alt: 'Défilé de mode' },
     { id: 8, category: 'equipe', src: 'https://ik.imagekit.io/cy3dy3vcm/Niyo/WhatsApp%20Unknown%202026-07-06%20at%208.07.37%20PM/WhatsApp%20Image%202026-07-06%20at%203.07.15%20PM.jpeg?updatedAt=1783361920444', alt: 'Équipe de production' },
-    { id: 9, category: 'produits', src: 'https://images.unsplash.com/photo-1560769629-975ec94e6a86?w=600&q=80', alt: 'Collection été' },
-    { id: 10, category: 'fabrication', src: 'https://images.unsplash.com/photo-1525966222134-fcfa99b8d077?w=600&q=80', alt: 'Finitions main' },
-    { id: 11, category: 'atelier', src: 'https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?w=600&q=80', alt: 'Stockage cuir' },
-    { id: 12, category: 'equipe', src: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&q=80', alt: 'Artisan au travail' },
+    { id: 9, category: 'produits', src: 'https://ik.imagekit.io/cy3dy3vcm/Niyo/WhatsApp%20Unknown%202026-07-06%20at%208.07.37%20PM/WhatsApp%20Image%202026-07-06%20at%203.00.58%20PM.jpeg?updatedAt=1783361918956', alt: 'Collection été' },
+    { id: 10, category: 'fabrication', src: 'https://ik.imagekit.io/cy3dy3vcm/Niyo/WhatsApp%20Unknown%202026-07-06%20at%208.07.37%20PM/WhatsApp%20Image%202026-07-06%20at%203.01.35%20PM.jpeg?updatedAt=1783361918287', alt: 'Finitions main' },
+    { id: 11, category: 'atelier', src: 'https://ik.imagekit.io/cy3dy3vcm/Niyo/WhatsApp%20Unknown%202026-07-06%20at%208.07.37%20PM/WhatsApp%20Image%202026-07-06%20at%203.04.15%20PM.jpeg?updatedAt=1783361919254', alt: 'Stockage cuir' },
+    { id: 12, category: 'equipe', src: 'https://ik.imagekit.io/cy3dy3vcm/Niyo/WhatsApp%20Unknown%202026-07-06%20at%208.07.37%20PM/WhatsApp%20Image%202026-07-06%20at%203.07.15%20PM.jpeg?updatedAt=1783361920444', alt: 'Artisan au travail' },
   ],
 }
 
 export const contact = {
   title: 'Contactez-nous',
   subtitle: 'Nous sommes à votre écoute',
-  address: 'Gitega,Bwoga',
+  address: 'Gitega, Bwoga, Burundi',
   phone: '+257 76 51 04 03',
   email: 'contact@niyoshoesfactory.com',
   mapEmbed:
-    '',
+    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.5!2d29.9246!3d-3.4260!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19a0f3e2f3b8f8b1%3A0x0!2zR2l0ZWdhLCBCdXJ1bmRp!5e0!3m2!1sfr!2sbi!4v1',
+  mapLink: 'https://www.google.com/maps/search/Gitega+Bwoga+Burundi',
 }
 
 export const socialLinks = [
@@ -251,7 +251,7 @@ export const footer = {
 }
 
 export const whatsapp = {
-  number: '+257 76 51 04 03',
+  number: '25776510403',
   message: 'Bonjour, je souhaite en savoir plus sur vos sandales Niyo Shoes Factory.',
   label: 'WhatsApp',
 }

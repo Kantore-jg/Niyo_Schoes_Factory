@@ -39,7 +39,7 @@ import SectionTitle from '../ui/SectionTitle.vue'
           class="about__value-card animate-on-scroll"
           :style="{ transitionDelay: `${i * 0.1}s` }"
         >
-          <span class="about__value-icon">{{ value.icon }}</span>
+          <span class="about__value-icon" aria-hidden="true" />
           <h4>{{ value.title }}</h4>
           <p>{{ value.description }}</p>
         </div>
@@ -136,10 +136,12 @@ import SectionTitle from '../ui/SectionTitle.vue'
   }
 
   &__value-icon {
-    font-size: 1.5rem;
-    color: $color-accent;
     display: block;
-    margin-bottom: 12px;
+    width: 32px;
+    height: 3px;
+    background: $color-accent;
+    margin: 0 auto 16px;
+    border-radius: 2px;
   }
 
   &__value-card h4 {

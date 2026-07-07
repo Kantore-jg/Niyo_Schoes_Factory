@@ -25,7 +25,6 @@ const closeLightbox = () => {
   <section id="galerie" class="section gallery">
     <div class="container">
       <SectionTitle
-        label="Visuels"
         title="Galerie"
         subtitle="Découvrez notre univers à travers nos images"
       />

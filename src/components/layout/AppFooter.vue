@@ -7,9 +7,9 @@ import { company, footer, contact, socialLinks } from '../../data/data.js'
     <div class="footer__inner container">
       <div class="footer__grid">
         <div class="footer__brand">
-          <div class="footer__logo">
+          <!-- <div class="footer__logo">
             <img :src="company.logo" :alt="company.name" class="footer__logo-img" />
-          </div>
+          </div> -->
           <p class="footer__tagline">{{ footer.tagline }}</p>
         </div>
 

@@ -40,8 +40,8 @@ onUnmounted(() => {
   >
     <div class="navbar__inner container">
       <a href="#accueil" class="navbar__logo" @click="closeMenu">
-        <img :src="company.logo" :alt="company.name" class="navbar__logo-img" /><h3>{{ company.name }}</h3>
-
+        <img :src="company.logo" :alt="company.name" class="navbar__logo-img" />
+        <span class="navbar__brand-name">{{ company.name }}</span>
       </a>
       <nav class="navbar__nav" role="navigation" aria-label="Navigation principale">
         <ul class="navbar__list">
@@ -124,7 +124,24 @@ onUnmounted(() => {
   &__logo {
     display: flex;
     align-items: center;
+    gap: 12px;
     flex-shrink: 0;
+  }
+
+  &__brand-name {
+    font-family: $font-heading;
+    font-size: 1rem;
+    font-weight: 600;
+    color: $color-white;
+    transition: color $transition;
+
+    @include respond-to(mobile) {
+      display: none;
+    }
+  }
+
+  &--scrolled &__brand-name {
+    color: $color-primary;
   }
 
   &__logo-img {
