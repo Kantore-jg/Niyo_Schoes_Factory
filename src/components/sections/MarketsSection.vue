@@ -1,13 +1,6 @@
 <script setup>
-import { ref } from 'vue'
 import { markets } from '../../data/data.js'
 import SectionTitle from '../ui/SectionTitle.vue'
-
-const activeMarket = ref(null)
-
-const selectMarket = (market) => {
-  activeMarket.value = activeMarket.value?.id === market.id ? null : market
-}
 </script>
 
 <template>
@@ -15,53 +8,30 @@ const selectMarket = (market) => {
     <div class="container">
       <SectionTitle
         title="Nos Marchés"
-        subtitle="Des sandales Niyo commercialisées à travers le monde"
+        subtitle="Retrouvez nos points de présence avec adresse, téléphone et visuel"
       />
 
-      <div class="markets__layout">
-        <div class="markets__map animate-on-scroll">
-          <svg viewBox="0 0 100 60" class="markets__svg" aria-label="Carte des marchés">
-            <rect width="100" height="60" fill="#e8e4df" rx="2" />
-            <ellipse cx="50" cy="30" rx="48" ry="28" fill="#d4cfc8" opacity="0.5" />
-
-            <circle
-              v-for="market in markets"
-              :key="market.id"
-              :cx="market.x"
-              :cy="market.y"
-              r="3"
-              class="markets__dot"
-              :class="{ 'markets__dot--active': activeMarket?.id === market.id }"
-              role="button"
-              tabindex="0"
-              :aria-label="market.country"
-              @click="selectMarket(market)"
-              @keydown.enter="selectMarket(market)"
-            />
-          </svg>
-          <p class="markets__map-hint">Cliquez sur un point pour voir les détails</p>
-        </div>
-
-        <div class="markets__list">
-          <div
-            v-for="(market, i) in markets"
-            :key="market.id"
-            class="markets__card animate-on-scroll"
-            :class="{ 'markets__card--active': activeMarket?.id === market.id }"
-            :style="{ transitionDelay: `${i * 0.08}s` }"
-            role="button"
-            tabindex="0"
-            @click="selectMarket(market)"
-            @keydown.enter="selectMarket(market)"
-          >
-            <div class="markets__card-header">
-              <span class="markets__flag">{{ market.code }}</span>
-              <h3>{{ market.country }}</h3>
-            </div>
-            <p>{{ market.description }}</p>
-            <span class="markets__distribution">{{ market.distribution }}</span>
+      <div class="markets__grid">
+        <article
+          v-for="(market, i) in markets"
+          :key="market.id"
+          class="markets__card animate-on-scroll"
+          :style="{ transitionDelay: `${i * 0.08}s` }"
+        >
+          <div class="markets__image-wrap">
+            <img :src="market.image" :alt="market.address" loading="lazy" />
           </div>
-        </div>
+
+          <div class="markets__body">
+            <p class="markets__label">Adresse</p>
+            <h3 class="markets__address">{{ market.address }}</h3>
+
+            <p class="markets__label">Téléphone</p>
+            <a class="markets__phone" :href="`tel:${market.phoneHref}`">
+              {{ market.phone }}
+            </a>
+          </div>
+        </article>
       </div>
     </div>
   </section>
@@ -72,109 +42,91 @@ const selectMarket = (market) => {
 @use '../../styles/mixins' as *;
 
 .markets {
-  background: $color-white;
+  background:
+    radial-gradient(circle at top left, rgba($color-accent, 0.08), transparent 30%),
+    linear-gradient(180deg, $color-bg 0%, $color-white 100%);
 
-  &__layout {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 48px;
-    align-items: start;
-
-    @include respond-to(mobile) {
-      grid-template-columns: 1fr;
-    }
-  }
-
-  &__map {
-    position: sticky;
-    top: 100px;
-    background: $color-bg;
-    border-radius: $radius-lg;
-    padding: 32px;
-    box-shadow: $shadow-sm;
-  }
-
-  &__svg {
-    width: 100%;
-    height: auto;
-  }
-
-  &__dot {
-    fill: $color-accent;
-    cursor: pointer;
-    transition: all $transition;
-    stroke: $color-white;
-    stroke-width: 0.5;
-
-    &:hover,
-    &--active {
-      fill: $color-primary;
-      r: 4;
-      filter: drop-shadow(0 0 4px rgba($color-accent, 0.6));
-    }
-  }
-
-  &__map-hint {
-    text-align: center;
-    font-size: 0.8rem;
-    color: rgba($color-text, 0.5);
-    margin-top: 16px;
-  }
-
-  &__list {
+  &__grid {
     display: flex;
-    flex-direction: column;
-    gap: 16px;
+    flex-wrap: nowrap;
+    gap: 24px;
+    overflow-x: auto;
+    padding-bottom: 12px;
+    scroll-snap-type: x proximity;
+
+    &::-webkit-scrollbar {
+      height: 8px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: rgba($color-primary, 0.2);
+      border-radius: 999px;
+    }
   }
 
   &__card {
-    padding: 24px;
+    flex: 0 0 280px;
+    background: $color-white;
     border-radius: $radius-md;
-    border: 2px solid transparent;
-    background: $color-bg;
-    cursor: pointer;
-    transition: all $transition;
+    overflow: hidden;
+    box-shadow: $shadow-sm;
+    border-top: 4px solid $color-primary;
+    @include hover-lift;
+    scroll-snap-align: start;
 
-    &:hover,
-    &--active {
-      border-color: $color-accent;
-      box-shadow: $shadow-md;
-      background: $color-white;
+    @include respond-to(mobile) {
+      flex-basis: 240px;
     }
   }
 
-  &__card-header {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 8px;
+  &__image-wrap {
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    background: $color-bg;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform $transition-slow;
+    }
   }
 
-  &__flag {
-    font-family: $font-button;
-    font-size: 0.7rem;
+  &__card:hover &__image-wrap img {
+    transform: scale(1.05);
+  }
+
+  &__body {
+    padding: 18px 18px 20px;
+  }
+
+  &__label {
+    font-size: 0.72rem;
     font-weight: 700;
-    background: $color-primary;
-    color: $color-accent;
-    padding: 4px 8px;
-    border-radius: $radius-sm;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: $color-primary;
+    margin-bottom: 6px;
   }
 
-  &__card h3 {
-    font-size: 1.1rem;
+  &__address {
+    font-family: $font-heading;
+    font-size: 1.05rem;
+    line-height: 1.35;
+    margin-bottom: 16px;
   }
 
-  &__card p {
-    font-size: 0.85rem;
-    color: rgba($color-text, 0.7);
-    line-height: 1.6;
-    margin-bottom: 8px;
-  }
-
-  &__distribution {
-    font-size: 0.75rem;
-    font-weight: 500;
+  &__phone {
+    display: inline-block;
+    font-size: 0.92rem;
+    font-weight: 600;
     color: $color-secondary;
+    transition: color $transition;
+
+    &:hover {
+      color: $color-primary;
+    }
   }
 }
 </style>
