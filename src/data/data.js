@@ -30,18 +30,17 @@ export const navigation = [
 
 export const about = {
   title: 'À propos de nous',
-  subtitle: 'Une histoire de passion et d\'excellence',
   history:
-    'Fondée en 2020 à Gitega, Niyo Shoes Factory est née de la vision d\'un artisan passionné par le cuir et la confection de chaussures. Notre atelier a grandi pour devenir une référence dans la fabrication de sandales de qualité supérieure au Burundi et à l\'international.',
+    'Fondée en 2020 à Gitega.Notre atelier a grandi pour devenir une référence dans la fabrication de sandales de qualité supérieure au Burundi.',
   mission:
     'Créer des sandales qui allient confort, durabilité et esthétique, en respectant les traditions artisanales tout en intégrant les innovations les plus récentes.',
   vision:
-    'Devenir la marque de référence mondiale pour les sandales en cuir  , reconnue pour son excellence et son engagement envers la qualité.',
+    'Devenir la marque de référence Nationale pour les sandales en cuir  , reconnue pour son excellence et son engagement envers la qualité.',
   values: [
-    {  title: 'Qualité', description: 'Chaque paire est inspectée avec le plus grand soin.' },
-    {  title: 'Artisanat', description: 'Un savoir-faire transmis de génération en génération.' },
-    {  title: 'Innovation', description: 'Des techniques modernes au service de la tradition.' },
-    {  title: 'Durabilité', description: 'Des matériaux responsables pour un avenir meilleur.' },
+    { title: 'Qualité', description: 'Chaque paire est inspectée avec le plus grand soin.' },
+    { title: 'Artisanat', description: 'Un savoir-faire transmis de génération en génération.' },
+    { title: 'Innovation', description: 'Des techniques modernes au service de la tradition.' },
+    { title: 'Durabilité', description: 'Des matériaux responsables pour un avenir meilleur.' },
   ],
   capabilities: [
     { label: 'Capacité de production', value: '200', unit: 'paires/an' },
@@ -65,13 +64,13 @@ export const products = [
     name: 'Sandales Homme',
     description: 'Sandale en cuir pleine fleur avec semelle anatomique et finitions main.',
     image: 'https://ik.imagekit.io/cy3dy3vcm/Niyo/WhatsApp%20Unknown%202026-07-06%20at%208.07.37%20PM/WhatsApp%20Image%202026-07-06%20at%203.00.58%20PM.jpeg?updatedAt=1783361918956',
-    colors: ['Marron', 'Noir', 'Cognac'],
+    colors: ['Marron', 'Noir', 'brown'],
     sizes: ['39', '40', '41', '42', '43', '44', '45'],
   },
   {
     id: 2,
     category: 'homme',
-    name: 'PAEEJ',
+    name: '--',
     description: 'Design contemporain avec bride croisée et semelle antidérapante.',
     image: 'https://ik.imagekit.io/cy3dy3vcm/Niyo/WhatsApp%20Unknown%202026-07-06%20at%208.07.37%20PM/WhatsApp%20Image%202026-07-06%20at%203.02.24%20PM.jpeg?updatedAt=1783361918630',
     colors: ['Noir', 'Brun foncé', 'Sable'],
