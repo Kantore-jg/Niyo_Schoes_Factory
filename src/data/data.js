@@ -131,7 +131,7 @@ export const markets = [
     phone: '+257 76 51 04 03',
     phoneHref: '+25776510403',
     image:
-      'https://scontent.fnbo19-1.fna.fbcdn.net/v/t39.30808-6/677155360_1460929245727827_7329390299645018764_n.jpg?stp=dst-jpg_tt6&cstp=mx2040x1536&ctp=s2040x1536&_nc_cat=108&ccb=1-7&_nc_sid=833d8c&_nc_ohc=9oVYqzOqrX8Q7kNvwGgWVcN&_nc_oc=Ado4D00mnfSPF7aE34vWQ5xQMbujKQY2GgTZANgUz8LZf9JPpx1dSf6NNwZohiXXUOM&_nc_zt=23&_nc_ht=scontent.fnbo19-1.fna&_nc_gid=2b9oz_fpLtYqj8qfY9lgNw&_nc_ss=7b2a8&oh=00_AQBY-xubE3v7Ag5kUkmKWUNGKFgdtAQC4nFjb4G-Cx4aVg&oe=6A51D571',
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSi1IFlxbcRkTcEZl76DZNVxqVONpQg4QgRnEEudzCjxh_GN2ZfQiLkKaUQ&s=10',
   },
   {
     id: '2',
@@ -139,7 +139,7 @@ export const markets = [
     phone: '+257 76 51 04 03',
     phoneHref: '+25776510403',
     image:
-      'https://ik.imagekit.io/cy3dy3vcm/Niyo/WhatsApp%20Unknown%202026-07-06%20at%208.07.37%20PM/WhatsApp%20Image%202026-07-06%20at%203.00.58%20PM.jpeg?updatedAt=1783361918956',
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2JR4wOF69NK1WZA7AB24cM7nEPGkfrE6-0Lt1zIiV4m-_tvfyN__GwhI&s=10',
   },
   {
     id: '3',
@@ -147,15 +147,15 @@ export const markets = [
     phone: '+257 76 51 04 03',
     phoneHref: '+25776510403',
     image:
-      'https://ik.imagekit.io/cy3dy3vcm/Niyo/WhatsApp%20Unknown%202026-07-06%20at%208.07.37%20PM/WhatsApp%20Image%202026-07-06%20at%203.02.24%20PM.jpeg?updatedAt=1783361918630',
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7kZpuH82kGrP3qP0QedDWyayQK2q1yxPS1yNIUX554qav5rvtT5KjNQA&s=10',
   },
   {
     id: '4',
-    address: 'Bujumbura, Burundi',
+    address: 'Bujumbura, Burundi (palais des arts)',
     phone: '+257 76 51 04 03',
     phoneHref: '+25776510403',
     image:
-      'https://ik.imagekit.io/cy3dy3vcm/Niyo/WhatsApp%20Unknown%202026-07-06%20at%208.07.37%20PM/WhatsApp%20Image%202026-07-06%20at%203.01.35%20PM.jpeg?updatedAt=1783361918287',
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSY5NuKepCq965kvPFgVJqb-ZKK4T1Z6_uJpD92q33wMQ&s=10',
   },
 ]
 

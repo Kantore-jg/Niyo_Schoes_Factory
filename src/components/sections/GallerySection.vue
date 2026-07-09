@@ -30,7 +30,6 @@ const setFilter = (id) => {
     <div class="container">
       <SectionTitle
         title="Galerie"
-        subtitle="Découvrez notre univers à travers nos images"
       />
 
       <div class="gallery__filters animate-on-scroll">
