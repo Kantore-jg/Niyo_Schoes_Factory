@@ -32,7 +32,7 @@ export const about = {
   title: 'À propos de nous',
   subtitle: 'Un savoir-faire artisanal au service de l\'élégance et du confort',
   history:
-    'Fondée en 2020 à Gitega.Notre atelier a grandi pour devenir une référence dans la fabrication de sandales de qualité supérieure au Burundi.',
+    'Fondée en 2020 à Gitega.Par NIYOMWUNGERE Willy.',
   mission:
     'Créer des sandales qui allient confort, durabilité et esthétique, en respectant les traditions artisanales tout en intégrant les innovations les plus récentes.',
   vision:
@@ -111,19 +111,118 @@ export const products = [
 export const events = [
   {
     id: 1,
-    name: "Salon International",
+    slug: 'salon-international-source-du-nil-2026',
+    name: 'Salon International',
     date: 'Janvier 2026',
     location: 'Bujumbura, Source du Nil',
-    description: 'Présentation de la collection   2026 devant plus de 400 visiteurs professionnels.',
-    image: 'https://ik.imagekit.io/cy3dy3vcm/Niyo/event/source%20du%20nil/Image/IMG_20251210_103502.jpg?updatedAt=1783850067305',
+    description: 'Présentation de la collection 2026 devant plus de 400 visiteurs professionnels.',
+    summary:
+      'Niyo Shoes Factory a participé au Salon International à la Source du Nil pour présenter sa nouvelle collection de sandales en cuir. Une occasion de rencontrer des acheteurs, partager notre savoir-faire artisanal et faire découvrir l\'excellence de nos finitions.',
+    image:
+      'https://ik.imagekit.io/cy3dy3vcm/Niyo/event/source%20du%20nil/Image/IMG_20251210_103502.jpg?updatedAt=1783850067305',
+    highlights: [
+      '400+ visiteurs professionnels',
+      'Collection 2026 dévoilée',
+      'Rencontres avec des partenaires locaux et internationaux',
+    ],
+    gallery: [
+      {
+        id: 1,
+        src: 'https://ik.imagekit.io/cy3dy3vcm/Niyo/event/source%20du%20nil/Image/IMG_20251210_103502.jpg?updatedAt=1783850067305',
+        alt: 'Stand Niyo Shoes Factory au salon',
+        caption: 'Notre stand au Salon International, Source du Nil',
+      },
+      {
+        id: 2,
+        src: 'https://ik.imagekit.io/cy3dy3vcm/Niyo/event/source%20du%20nil/Image/IMG_20251210_104524.jpg?updatedAt=1783850060803',
+        alt: 'Sandales présentées au salon',
+        caption: 'Présentation de la collection 2026 aux visiteurs',
+      },
+      {
+        id: 3,
+        src: 'https://ik.imagekit.io/cy3dy3vcm/Niyo/event/source%20du%20nil/Image/IMG_20251210_103825.jpg?updatedAt=1783850043348',
+        alt: 'Notre stand avec les visiteurs',
+        caption: 'avec des acheteurs et partenaires potentiels',
+      }
+    ],
+    videos: [
+  {
+    id: 1,
+    url: 'https://ik.imagekit.io/cy3dy3vcm/Niyo/event/source%20du%20nil/Video/VID_20251210_103454.mp4?updatedAt=1783850304084',
+    type: 'mp4',
+    title: 'Salon International à la Source du Nil',
+    description: 'Présentation de notre stand et de nos sandales.',
+    thumbnail: 'https://ik.imagekit.io/cy3dy3vcm/Niyo/event/source%20du%20nil/Image/IMG_20251210_103434.jpg?updatedAt=1783850068945'
+  }
+],
+    moments: [
+      {
+        id: 1,
+        title: 'Accueil des visiteurs',
+        description: 'Ouverture du stand et présentation de la marque Niyo Shoes Factory.',
+        image:
+          'https://ik.imagekit.io/cy3dy3vcm/Niyo/event/source%20du%20nil/Image/IMG_20251210_103502.jpg?updatedAt=1783850067305',
+        date: '10 déc. 2025',
+      },
+      {
+        id: 2,
+        title: 'Découverte des collections',
+        description: 'Les visiteurs ont pu essayer et admirer nos sandales en cuir.',
+        image:
+          'https://ik.imagekit.io/cy3dy3vcm/Niyo/event/source%20du%20nil/Image/IMG_20251210_104524.jpg?updatedAt=1783850060803',
+        date: '10 déc. 2025',
+      },
+    ],
   },
   {
     id: 2,
+    slug: 'foire-artisanale-burundaise-2025',
     name: 'Foire Artisanale Burundaise',
     date: 'Juin 2025',
     location: 'Gitega, Burundi',
     description: 'Exposition de notre savoir-faire artisanal et démonstrations en direct.',
-    image: 'https://ik.imagekit.io/cy3dy3vcm/Niyo/event/source%20du%20nil/Image/IMG_20251210_104524.jpg?updatedAt=1783850060803',
+    summary:
+      'Lors de la Foire Artisanale Burundaise à Gitega, nous avons exposé notre processus de fabrication et nos dernières créations. Les visiteurs ont pu assister à des démonstrations en direct et échanger avec nos artisans.',
+    image:
+      'https://ik.imagekit.io/cy3dy3vcm/Niyo/event/source%20du%20nil/Image/IMG_20251210_104524.jpg?updatedAt=1783850060803',
+    highlights: [
+      'Démonstrations de fabrication en direct',
+      'Rencontre avec les artisans Niyo',
+      'Forte affluence du public local',
+    ],
+    gallery: [
+      {
+        id: 1,
+        src: 'https://ik.imagekit.io/cy3dy3vcm/Niyo/event/source%20du%20nil/Image/IMG_20251210_104524.jpg?updatedAt=1783850060803',
+        alt: 'Stand à la foire artisanale de Gitega',
+        caption: 'Notre espace d\'exposition à Gitega',
+      },
+      {
+        id: 2,
+        src: 'https://ik.imagekit.io/cy3dy3vcm/Niyo/event/source%20du%20nil/Image/IMG_20251210_103502.jpg?updatedAt=1783850067305',
+        alt: 'Artisans au travail pendant la foire',
+        caption: 'Démonstration du savoir-faire artisanal',
+      },
+    ],
+    videos: [],
+    moments: [
+      {
+        id: 1,
+        title: 'Démonstration en atelier',
+        description: 'Présentation des étapes de fabrication d\'une sandale en cuir.',
+        image:
+          'https://ik.imagekit.io/cy3dy3vcm/Niyo/event/source%20du%20nil/Image/IMG_20251210_104524.jpg?updatedAt=1783850060803',
+        date: 'Juin 2025',
+      },
+      {
+        id: 2,
+        title: 'Échanges avec le public',
+        description: 'Rencontres enrichissantes avec les visiteurs et les artisans locaux.',
+        image:
+          'https://ik.imagekit.io/cy3dy3vcm/Niyo/event/source%20du%20nil/Image/IMG_20251210_103502.jpg?updatedAt=1783850067305',
+        date: 'Juin 2025',
+      },
+    ],
   },
 ]
 

@@ -28,7 +28,9 @@ const handleKeydown = (e) => {
         </svg>
       </button>
       <img :src="image.src" :alt="image.alt || ''" class="lightbox__image" />
-      <p v-if="image.alt" class="lightbox__caption">{{ image.alt }}</p>
+      <p v-if="image.caption || image.alt" class="lightbox__caption">
+        {{ image.caption || image.alt }}
+      </p>
     </div>
   </Teleport>
 </template>

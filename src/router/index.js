@@ -72,6 +72,11 @@ const routes = [
     },
   },
   {
+    path: '/evenements/:slug',
+    name: 'event-detail',
+    component: () => import('../views/EventDetailView.vue'),
+  },
+  {
     path: '/marches',
     name: 'markets',
     component: () => import('../views/MarketsView.vue'),

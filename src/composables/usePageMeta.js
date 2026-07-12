@@ -32,6 +32,7 @@ function applyPageMeta(meta) {
   const title = meta.title || DEFAULT_META.title
   const description = meta.description || DEFAULT_META.description
   const path = meta.canonicalPath || '/'
+  const image = meta.image || DEFAULT_IMAGE
   const canonicalUrl = path === '/' ? `${SITE_URL}/` : `${SITE_URL}${path}`
 
   document.title = title
@@ -40,20 +41,27 @@ function applyPageMeta(meta) {
   setMetaTag('meta[property="og:title"]', title)
   setMetaTag('meta[property="og:description"]', description)
   setMetaTag('meta[property="og:url"]', canonicalUrl)
-  setMetaTag('meta[property="og:image"]', DEFAULT_IMAGE)
+  setMetaTag('meta[property="og:image"]', image)
   setMetaTag('meta[name="twitter:title"]', title)
   setMetaTag('meta[name="twitter:description"]', description)
-  setMetaTag('meta[name="twitter:image"]', DEFAULT_IMAGE)
+  setMetaTag('meta[name="twitter:image"]', image)
 
   setCanonical(canonicalUrl)
+}
+
+export function setDynamicPageMeta(meta) {
+  applyPageMeta(meta)
 }
 
 export function usePageMeta() {
   const route = useRoute()
 
   watch(
-    () => route.meta,
-    (meta) => applyPageMeta(meta),
-    { immediate: true, deep: true }
+    () => route.name,
+    (name) => {
+      if (name === 'event-detail') return
+      applyPageMeta(route.meta)
+    },
+    { immediate: true }
   )
 }

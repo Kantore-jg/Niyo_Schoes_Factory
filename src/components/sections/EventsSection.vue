@@ -1,5 +1,7 @@
 <script setup>
+import { RouterLink } from 'vue-router'
 import { events } from '../../data/data.js'
+import { getEventPath, getEventMediaCount } from '../../composables/useEvents.js'
 import SectionTitle from '../ui/SectionTitle.vue'
 
 defineProps({
@@ -17,22 +19,27 @@ defineProps({
       />
 
       <div class="events__grid">
-        <article
+        <RouterLink
           v-for="(event, i) in events"
           :key="event.id"
+          :to="getEventPath(event.slug)"
           class="events__card animate-on-scroll"
           :style="{ transitionDelay: `${i * 0.1}s` }"
         >
           <div class="events__card-image">
             <img :src="event.image" :alt="event.name" loading="lazy" />
             <span class="events__date">{{ event.date }}</span>
+            <span v-if="getEventMediaCount(event) > 0" class="events__media-count">
+              {{ getEventMediaCount(event) }} médias
+            </span>
           </div>
           <div class="events__card-body">
             <h3>{{ event.name }}</h3>
             <p class="events__location">{{ event.location }}</p>
             <p>{{ event.description }}</p>
+            <span class="events__cta">Voir l'événement →</span>
           </div>
-        </article>
+        </RouterLink>
       </div>
     </div>
   </section>
@@ -54,11 +61,19 @@ defineProps({
   }
 
   &__card {
+    display: block;
     background: $color-white;
     border-radius: $radius-lg;
     overflow: hidden;
     box-shadow: $shadow-sm;
+    transition: all $transition;
     @include hover-lift;
+
+    &:hover {
+      .events__cta {
+        color: $color-primary;
+      }
+    }
   }
 
   &__card-image {
@@ -91,6 +106,19 @@ defineProps({
     border-radius: $radius-sm;
   }
 
+  &__media-count {
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
+    background: rgba($color-primary, 0.85);
+    color: $color-white;
+    font-family: $font-button;
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 5px 12px;
+    border-radius: $radius-sm;
+  }
+
   &__card-body {
     padding: 28px;
 
@@ -107,10 +135,19 @@ defineProps({
     margin-bottom: 12px;
   }
 
-  &__card-body p:last-child {
+  &__card-body p:nth-of-type(2) {
     font-size: 0.9rem;
     color: rgba($color-text, 0.7);
     line-height: 1.6;
+    margin-bottom: 16px;
+  }
+
+  &__cta {
+    font-family: $font-button;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: $color-accent;
+    transition: color $transition;
   }
 }
 </style>
