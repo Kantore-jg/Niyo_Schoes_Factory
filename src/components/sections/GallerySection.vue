@@ -23,12 +23,17 @@ const closeLightbox = () => {
 const setFilter = (id) => {
   activeFilter.value = id
 }
+
+defineProps({
+  showTitle: { type: Boolean, default: true },
+})
 </script>
 
 <template>
-  <section id="galerie" class="section gallery">
+  <section class="section gallery">
     <div class="container">
       <SectionTitle
+        v-if="showTitle"
         title="Galerie"
       />
 

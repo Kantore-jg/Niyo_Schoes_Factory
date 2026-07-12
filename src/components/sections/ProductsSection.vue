@@ -1,11 +1,24 @@
 <script setup>
-import { ref, computed } from 'vue'
+import { ref, computed, watch } from 'vue'
 import { categories, products } from '../../data/data.js'
 import { useWhatsApp } from '../../composables/useWhatsApp.js'
 import SectionTitle from '../ui/SectionTitle.vue'
 
+const props = defineProps({
+  showTitle: { type: Boolean, default: true },
+  initialCategory: { type: String, default: 'homme' },
+  showTabs: { type: Boolean, default: true },
+})
+
 const { openWhatsApp } = useWhatsApp()
-const activeCategory = ref('homme')
+const activeCategory = ref(props.initialCategory)
+
+watch(
+  () => props.initialCategory,
+  (value) => {
+    activeCategory.value = value
+  }
+)
 
 const filteredProducts = computed(() =>
   products.filter((p) => p.category === activeCategory.value)
@@ -17,14 +30,15 @@ const setCategory = (slug) => {
 </script>
 
 <template>
-  <section id="produits" class="section products">
+  <section class="section products">
     <div class="container">
       <SectionTitle
+        v-if="showTitle"
         title="Nos Produits"
         subtitle="Des sandales d'exception pour hommes et femmes"
       />
 
-      <div class="products__tabs animate-on-scroll">
+      <div v-if="showTabs" class="products__tabs animate-on-scroll">
         <button
           v-for="cat in categories"
           :key="cat.id"

@@ -1,7 +1,9 @@
-import { onMounted, onUnmounted } from 'vue'
+import { onMounted, onUnmounted, nextTick, watch } from 'vue'
+import { useRoute } from 'vue-router'
 
 export function useScrollAnimation(selector = '.animate-on-scroll') {
   let observer = null
+  const route = useRoute()
 
   const observe = () => {
     observer?.disconnect()
@@ -22,6 +24,14 @@ export function useScrollAnimation(selector = '.animate-on-scroll') {
   onMounted(() => {
     observe()
   })
+
+  watch(
+    () => route.path,
+    async () => {
+      await nextTick()
+      observe()
+    }
+  )
 
   onUnmounted(() => {
     observer?.disconnect()

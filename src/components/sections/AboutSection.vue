@@ -1,12 +1,17 @@
 <script setup>
 import { about } from '../../data/data.js'
 import SectionTitle from '../ui/SectionTitle.vue'
+
+defineProps({
+  showTitle: { type: Boolean, default: true },
+})
 </script>
 
 <template>
-  <section id="apropos" class="section about">
+  <section class="section about">
     <div class="container">
       <SectionTitle
+        v-if="showTitle"
         :title="about.title"
         :subtitle="about.subtitle"
       />

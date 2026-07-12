@@ -14,22 +14,23 @@ export const hero = {
   subtitle: 'Portez des chaussures niyo, marchez confortablement!',
   description:
     'Découvrez l\'excellence de la fabrication de sandales  , alliant tradition artisanale et design contemporain pour un confort inégalé.',
-  ctaPrimary: { label: 'Découvrir nos collections', href: '#produits' },
-  ctaSecondary: { label: 'Nous contacter sur WhatsApp', href: '#contact' },
+  ctaPrimary: { label: 'Découvrir nos collections', href: '/produits' },
+  ctaSecondary: { label: 'Nous contacter sur WhatsApp', href: '/contact' },
 }
 
 export const navigation = [
-  { id: 'accueil', label: 'Accueil', href: '#accueil' },
-  { id: 'apropos', label: 'À propos', href: '#apropos' },
-  { id: 'produits', label: 'Produits', href: '#produits' },
-  { id: 'evenements', label: 'Événements', href: '#evenements' },
-  { id: 'marches', label: 'Marchés', href: '#marches' },
-  { id: 'galerie', label: 'Galerie', href: '#galerie' },
-  { id: 'contact', label: 'Contact', href: '#contact' },
+  { id: 'accueil', label: 'Accueil', href: '/' },
+  { id: 'apropos', label: 'À propos', href: '/a-propos' },
+  { id: 'produits', label: 'Produits', href: '/produits' },
+  { id: 'evenements', label: 'Événements', href: '/evenements' },
+  { id: 'marches', label: 'Marchés', href: '/marches' },
+  { id: 'galerie', label: 'Galerie', href: '/galerie' },
+  { id: 'contact', label: 'Contact', href: '/contact' },
 ]
 
 export const about = {
   title: 'À propos de nous',
+  subtitle: 'Un savoir-faire artisanal au service de l\'élégance et du confort',
   history:
     'Fondée en 2020 à Gitega.Notre atelier a grandi pour devenir une référence dans la fabrication de sandales de qualité supérieure au Burundi.',
   mission:
@@ -201,15 +202,15 @@ export const footer = {
   copyright: `© ${new Date().getFullYear()} Niyo Shoes Factory. Tous droits réservés.`,
   tagline: 'L\'excellence du cuir, depuis 2020.',
   quickLinks: [
-    { label: 'Accueil', href: '#accueil' },
-    { label: 'À propos', href: '#apropos' },
-    { label: 'Produits', href: '#produits' },
-    { label: 'Contact', href: '#contact' },
+    { label: 'Accueil', href: '/' },
+    { label: 'À propos', href: '/a-propos' },
+    { label: 'Produits', href: '/produits' },
+    { label: 'Contact', href: '/contact' },
   ],
   productLinks: [
-    { label: 'Sandales Homme', href: '#produits' },
-    { label: 'Sandales Femme', href: '#produits' },
-    { label: 'Collection  ', href: '#produits' },
+    { label: 'Sandales Homme', href: '/sandales-homme' },
+    { label: 'Sandales Femme', href: '/sandales-femme' },
+    { label: 'Toute la collection', href: '/produits' },
   ],
 }
 

@@ -3,13 +3,18 @@ import { contact, socialLinks } from '../../data/data.js'
 import { useWhatsApp } from '../../composables/useWhatsApp.js'
 import SectionTitle from '../ui/SectionTitle.vue'
 
+defineProps({
+  showTitle: { type: Boolean, default: true },
+})
+
 const { openWhatsApp } = useWhatsApp()
 </script>
 
 <template>
-  <section id="contact" class="section contact">
+  <section class="section contact">
     <div class="container">
       <SectionTitle
+        v-if="showTitle"
         :title="contact.title"
         :subtitle="contact.subtitle"
       />

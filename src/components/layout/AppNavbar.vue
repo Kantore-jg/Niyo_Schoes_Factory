@@ -1,11 +1,22 @@
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue'
+import { ref, computed, onMounted, onUnmounted } from 'vue'
+import { RouterLink, useRoute } from 'vue-router'
 import { company, navigation } from '../../data/data.js'
-import { useActiveSection } from '../../composables/useActiveSection.js'
 
-const { activeSection } = useActiveSection()
+const route = useRoute()
 const isScrolled = ref(false)
+const isHome = computed(() => route.path === '/')
+const showSolidNav = computed(() => isScrolled.value || !isHome.value)
 const isMenuOpen = ref(false)
+
+const productRoutes = ['/produits', '/sandales-homme', '/sandales-femme']
+
+const isNavActive = (item) => {
+  if (item.id === 'produits') {
+    return productRoutes.includes(route.path)
+  }
+  return route.path === item.href
+}
 
 const handleScroll = () => {
   isScrolled.value = window.scrollY > 50
@@ -35,25 +46,25 @@ onUnmounted(() => {
 <template>
   <header
     class="navbar"
-    :class="{ 'navbar--scrolled': isScrolled, 'navbar--open': isMenuOpen }"
+    :class="{ 'navbar--scrolled': showSolidNav, 'navbar--open': isMenuOpen }"
     role="banner"
   >
     <div class="navbar__inner container">
-      <a href="#accueil" class="navbar__logo" @click="closeMenu">
+      <RouterLink to="/" class="navbar__logo" @click="closeMenu">
         <img :src="company.logo" :alt="company.name" class="navbar__logo-img" />
         <span class="navbar__brand-name">{{ company.name }}</span>
-      </a>
+      </RouterLink>
       <nav class="navbar__nav" role="navigation" aria-label="Navigation principale">
         <ul class="navbar__list">
           <li v-for="item in navigation" :key="item.id">
-            <a
-              :href="item.href"
+            <RouterLink
+              :to="item.href"
               class="navbar__link"
-              :class="{ 'navbar__link--active': activeSection === item.id }"
+              :class="{ 'navbar__link--active': isNavActive(item) }"
               @click="closeMenu"
             >
               {{ item.label }}
-            </a>
+            </RouterLink>
           </li>
         </ul>
       </nav>
@@ -73,14 +84,14 @@ onUnmounted(() => {
     <div class="navbar__mobile" :class="{ 'navbar__mobile--open': isMenuOpen }">
       <ul class="navbar__mobile-list">
         <li v-for="item in navigation" :key="item.id">
-          <a
-            :href="item.href"
+          <RouterLink
+            :to="item.href"
             class="navbar__mobile-link"
-            :class="{ 'navbar__mobile-link--active': activeSection === item.id }"
+            :class="{ 'navbar__mobile-link--active': isNavActive(item) }"
             @click="closeMenu"
           >
             {{ item.label }}
-          </a>
+          </RouterLink>
         </li>
       </ul>
     </div>

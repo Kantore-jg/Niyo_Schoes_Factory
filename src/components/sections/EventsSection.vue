@@ -1,12 +1,17 @@
 <script setup>
 import { events } from '../../data/data.js'
 import SectionTitle from '../ui/SectionTitle.vue'
+
+defineProps({
+  showTitle: { type: Boolean, default: true },
+})
 </script>
 
 <template>
-  <section id="evenements" class="section events">
+  <section class="section events">
     <div class="container">
       <SectionTitle
+        v-if="showTitle"
         title="Événements"
         subtitle="Foires, salons et expositions auxquels nous participons"
       />

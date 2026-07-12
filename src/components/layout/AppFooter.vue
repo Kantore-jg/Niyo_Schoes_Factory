@@ -1,4 +1,5 @@
 <script setup>
+import { RouterLink } from 'vue-router'
 import { company, footer, contact, socialLinks } from '../../data/data.js'
 </script>
 
@@ -17,7 +18,7 @@ import { company, footer, contact, socialLinks } from '../../data/data.js'
           <h3 class="footer__heading">Navigation</h3>
           <ul>
             <li v-for="link in footer.quickLinks" :key="link.label">
-              <a :href="link.href">{{ link.label }}</a>
+              <RouterLink :to="link.href">{{ link.label }}</RouterLink>
             </li>
           </ul>
         </div>
@@ -26,7 +27,7 @@ import { company, footer, contact, socialLinks } from '../../data/data.js'
           <h3 class="footer__heading">Produits</h3>
           <ul>
             <li v-for="link in footer.productLinks" :key="link.label">
-              <a :href="link.href">{{ link.label }}</a>
+              <RouterLink :to="link.href">{{ link.label }}</RouterLink>
             </li>
           </ul>
         </div>

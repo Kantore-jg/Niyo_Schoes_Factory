@@ -1,5 +1,6 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
+import { RouterLink } from 'vue-router'
 import { hero, company } from '../../data/data.js'
 import { useWhatsApp } from '../../composables/useWhatsApp.js'
 
@@ -39,7 +40,7 @@ onUnmounted(() => {
       <p class="hero__description">{{ hero.description }}</p>
 
       <div class="hero__actions">
-        <a :href="hero.ctaPrimary.href" class="btn btn--accent">{{ hero.ctaPrimary.label }}</a>
+        <RouterLink :to="hero.ctaPrimary.href" class="btn btn--accent">{{ hero.ctaPrimary.label }}</RouterLink>
         <button class="btn btn--secondary" @click="openWhatsApp()">
           {{ hero.ctaSecondary.label }}
         </button>

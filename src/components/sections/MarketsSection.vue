@@ -1,12 +1,17 @@
 <script setup>
 import { markets } from '../../data/data.js'
 import SectionTitle from '../ui/SectionTitle.vue'
+
+defineProps({
+  showTitle: { type: Boolean, default: true },
+})
 </script>
 
 <template>
-  <section id="marches" class="section markets">
+  <section class="section markets">
     <div class="container">
       <SectionTitle
+        v-if="showTitle"
         title="Nos Marchés"
         subtitle="Retrouvez nos points de présence avec adresse, téléphone et visuel"
       />
