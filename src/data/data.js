@@ -1,6 +1,6 @@
 export const company = {
   name: 'Niyo Shoes Factory',
-  tagline: 'L\'art du cuir, l\'élégance à vos pieds',
+  tagline: 'Portez des chaussures niyo, marchez confortablement!',
   description:
     'Fabricant de sandales haut de gamme depuis plus de deux décennies, Niyo Shoes Factory allie savoir-faire artisanal et innovation industrielle pour créer des chaussures d\'exception.',
   founded: 2020,
@@ -11,7 +11,7 @@ export const hero = {
   backgroundImage:
     'https://ik.imagekit.io/cy3dy3vcm/Niyo/WhatsApp%20Unknown%202026-07-06%20at%208.07.44%20PM/WhatsApp%20Image%202026-07-06%20at%203.03.11%20PM.jpeg?updatedAt=1783361918949',
   title: 'Niyo Shoes Factory',
-  subtitle: 'L\'art du cuir, l\'élégance à vos pieds',
+  subtitle: 'Portez des chaussures niyo, marchez confortablement!',
   description:
     'Découvrez l\'excellence de la fabrication de sandales  , alliant tradition artisanale et design contemporain pour un confort inégalé.',
   ctaPrimary: { label: 'Découvrir nos collections', href: '#produits' },
@@ -35,7 +35,9 @@ export const about = {
   mission:
     'Créer des sandales qui allient confort, durabilité et esthétique, en respectant les traditions artisanales tout en intégrant les innovations les plus récentes.',
   vision:
-    'Devenir la marque de référence Nationale pour les sandales en cuir  , reconnue pour son excellence et son engagement envers la qualité.',
+    "Selon les estimations, plus de 99% des chaussures que nous portons au Burundi sont importées et plus de 70% d’entre elles sont portées. Nous avons mis en place une usine de fabrication, mais en raison de ressources limitées, nous avons commencé à fabriquer des sandales et nous nous préparons à fabriquer d’autres types de chaussures à l’avenir."+
+    "Nous travaillons dans la ville de Gitega au Burundi. nous produisons 1000 paires de sandales par mois, nous voulons atteindre 15 millions par an, nous employons 12 travailleurs, nous voulons en employer 2000 à l’avenir. Nous voulons qu’au moins un Burundais d’ici 2040 porte 1 paire de chaussures fabriquées dans notre usine."+
+    "Mais même ainsi, nous avons un problème avec les équipements destinés à fabriquer des chaussures, etc. mais nous croyons que nous y arriverons.",
   values: [
     { title: 'Qualité', description: 'Chaque paire est inspectée avec le plus grand soin.' },
     { title: 'Artisanat', description: 'Un savoir-faire transmis de génération en génération.' },
@@ -49,7 +51,7 @@ export const about = {
     { label: 'Employés qualifiés', value: '6', unit: 'artisans' },
   ],
   image:
-    'https://scontent.fnbo19-1.fna.fbcdn.net/v/t39.30808-6/677155360_1460929245727827_7329390299645018764_n.jpg?stp=dst-jpg_tt6&cstp=mx2040x1536&ctp=s2040x1536&_nc_cat=108&ccb=1-7&_nc_sid=833d8c&_nc_ohc=9oVYqzOqrX8Q7kNvwGgWVcN&_nc_oc=Ado4D00mnfSPF7aE34vWQ5xQMbujKQY2GgTZANgUz8LZf9JPpx1dSf6NNwZohiXXUOM&_nc_zt=23&_nc_ht=scontent.fnbo19-1.fna&_nc_gid=2b9oz_fpLtYqj8qfY9lgNw&_nc_ss=7b2a8&oh=00_AQBY-xubE3v7Ag5kUkmKWUNGKFgdtAQC4nFjb4G-Cx4aVg&oe=6A51D571',
+    'https://ik.imagekit.io/cy3dy3vcm/Niyo/WhatsApp%20Unknown%202026-07-06%20at%208.07.44%20PM/WhatsApp%20Image%202026-07-06%20at%203.04.26%20PM.jpeg?updatedAt=1783361919267',
 }
 
 export const categories = [
@@ -99,7 +101,7 @@ export const products = [
     category: 'femme',
     name: 'Niyo Summer Femme',
     description: 'Légèreté et confort pour les journées ensoleillées, finition dorée.',
-    image: 'https://scontent.fnbo19-1.fna.fbcdn.net/v/t39.30808-6/476281320_1120268489793906_2065771755404960301_n.jpg?stp=dst-jpg_tt6&cstp=mx720x478&ctp=s720x478&_nc_cat=103&ccb=1-7&_nc_sid=833d8c&_nc_ohc=dZJmkOogM3EQ7kNvwHhAK7r&_nc_oc=Adr6uLA4SJthZGm-uByAA4_EmuZ6Wc843h079_EFLNyxweiGvE4wCr3FMbaJTV7nUIM&_nc_zt=23&_nc_ht=scontent.fnbo19-1.fna&_nc_gid=GNMKCdyruP8hmm3HpEpVZQ&_nc_ss=7b2a8&oh=00_AQApqnl55zHr98gp8Y6twoUyn-ayWLwAz0dTqK-v5aqvTA&oe=6A52AB1E',
+    image: 'https://ik.imagekit.io/cy3dy3vcm/Niyo/WhatsApp%20Unknown%202026-07-06%20at%208.07.44%20PM/WhatsApp%20Image%202026-07-06%20at%203.03.11%20PM.jpeg?updatedAt=1783361918949',
     colors: ['Blanc', 'Or', 'Rose poudré', 'Noir'],
     sizes: ['35', '36', '37', '38', '39', '40'],
   },
@@ -108,19 +110,19 @@ export const products = [
 export const events = [
   {
     id: 1,
-    name: "Salon International de l'UNFPA",
+    name: "Salon International",
     date: 'Janvier 2026',
     location: 'Bujumbura, Source du Nil',
     description: 'Présentation de la collection   2026 devant plus de 400 visiteurs professionnels.',
-    image: 'https://scontent.fnbo19-1.fna.fbcdn.net/v/t39.30808-6/601016819_1362397192247700_8280626106810243167_n.jpg?stp=dst-jpg_tt6&cstp=mx780x1040&ctp=s780x1040&_nc_cat=108&ccb=1-7&_nc_sid=833d8c&_nc_ohc=vW8g7-tLS2gQ7kNvwF-d_3y&_nc_oc=AdoqWFpnUMXvmkBIvC9RJD5rq9h7oTZLGkffEVsqYaPyfbUeDJCTHPnsKUswQ-8kPcYKYpL_UXnv8aDaxJNlBAeH&_nc_zt=23&_nc_ht=scontent.fnbo19-1.fna&_nc_gid=69mbjoaVmlDc1xoTW8OeYg&_nc_ss=7b2a8&oh=00_AQD9A5sjUAOHXeFpremygG3fLY_rQOmW3cc0mM4kZNtcCw&oe=6A5280A2',
+    image: 'https://ik.imagekit.io/cy3dy3vcm/Niyo/event/source%20du%20nil/Image/IMG_20251210_103502.jpg?updatedAt=1783850067305',
   },
   {
     id: 2,
-    name: 'Foire Artisanale Africaine',
+    name: 'Foire Artisanale Burundaise',
     date: 'Juin 2025',
     location: 'Gitega, Burundi',
     description: 'Exposition de notre savoir-faire artisanal et démonstrations en direct.',
-    image: 'https://scontent.fnbo19-1.fna.fbcdn.net/v/t39.30808-6/476353308_1120892359731519_6180291981451020554_n.jpg?stp=dst-jpg_tt6&cstp=mx780x1032&ctp=s780x1032&_nc_cat=102&ccb=1-7&_nc_sid=833d8c&_nc_ohc=P2ixO2OR72kQ7kNvwFmVtWj&_nc_oc=Adp5GtwnsmzK0-L-1TlpRM6-2p1abofV2zeFyI9nCZBgVhwMAYhhlWBdaYRcWhH19vHqag4S3vYhjyhRpGEEWclk&_nc_zt=23&_nc_ht=scontent.fnbo19-1.fna&_nc_gid=fustaaz4kpgY0X50YYT6hA&_nc_ss=7b2a8&oh=00_AQB5iB3WmeGptfJMa5R1RaLZ0KF6SaBTlkHXK_7GHSfwEw&oe=6A527EB1',
+    image: 'https://ik.imagekit.io/cy3dy3vcm/Niyo/event/source%20du%20nil/Image/IMG_20251210_104524.jpg?updatedAt=1783850060803',
   },
 ]
 
