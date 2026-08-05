@@ -2,14 +2,14 @@ export const company = {
   name: 'Niyo Shoes Factory',
   tagline: 'Portez des chaussures niyo, marchez confortablement!',
   description:
-    'Fabricant de sandales haut de gamme depuis plus de deux décennies, Niyo Shoes Factory allie savoir-faire artisanal et innovation industrielle pour créer des chaussures d\'exception.',
+    'Des sandales de qualité fabriquées avec passion au Burundi. Confortables - Durables - Écologiques.',
   founded: 2020,
   logo: '/logo.png',
 }
 
 export const hero = {
   backgroundImage:
-    'https://ik.imagekit.io/cy3dy3vcm/Niyo/WhatsApp%20Unknown%202026-07-06%20at%208.07.44%20PM/WhatsApp%20Image%202026-07-06%20at%203.03.11%20PM.jpeg?updatedAt=1783361918949',
+    'https://ik.imagekit.io/cy3dy3vcm/Niyo/event/donatus%20conference%20center/IMG_20260804_124841_HDR.jpg?updatedAt=1785910150517',
   title: 'Niyo Shoes Factory',
   subtitle: 'Portez des chaussures niyo, marchez confortablement!',
   description:
@@ -30,26 +30,23 @@ export const navigation = [
 
 export const about = {
   title: 'À propos de nous',
-  subtitle: 'Un savoir-faire artisanal au service de l\'élégance et du confort',
+  subtitle: 'pour un avenir plus propre et durable.',
   history:
     'Fondée en 2020 à Gitega.Par NIYOMWUNGERE Willy.',
   mission:
-    'Créer des sandales qui allient confort, durabilité et esthétique, en respectant les traditions artisanales tout en intégrant les innovations les plus récentes.',
-  vision:
-    "Selon les estimations, plus de 99% des chaussures que nous portons au Burundi sont importées et plus de 70% d’entre elles sont portées. Nous avons mis en place une usine de fabrication, mais en raison de ressources limitées, nous avons commencé à fabriquer des sandales et nous nous préparons à fabriquer d’autres types de chaussures à l’avenir."+
-    "Nous travaillons dans la ville de Gitega au Burundi. nous produisons 1000 paires de sandales par mois, nous voulons atteindre 15 millions par an, nous employons 12 travailleurs, nous voulons en employer 2000 à l’avenir. Nous voulons qu’au moins un Burundais d’ici 2040 porte 1 paire de chaussures fabriquées dans notre usine."+
-    "Mais même ainsi, nous avons un problème avec les équipements destinés à fabriquer des chaussures, etc. mais nous croyons que nous y arriverons.",
+    'Nous transformons des materiaux recyclés en chausures durable , confortable et accessibles.',
+  vision:"Faire de Niyo Shoes Factory une référence africaine dans la fabrication de chaussures écologiques.",
   values: [
-    { title: 'Qualité', description: 'Chaque paire est inspectée avec le plus grand soin.' },
-    { title: 'Artisanat', description: 'Un savoir-faire transmis de génération en génération.' },
-    { title: 'Innovation', description: 'Des techniques modernes au service de la tradition.' },
-    { title: 'Durabilité', description: 'Des matériaux responsables pour un avenir meilleur.' },
+    { title: 'Matériaux recyclés', description: 'Nous valorisons les déchets pour réduire la pollution.' },
+    { title: 'Innovation Locale', description: 'Des produits conçus et fabriqués avec passion au Burundi.' },
+    { title: 'Impacts sociaux', description: 'Création d\'emplois et formation des jeunes.' },
+    { title: 'Developpement Durable', description: 'Nous oeuvrons pour un avenir meilleur pour tous.' },
   ],
   capabilities: [
-    { label: 'Capacité de production', value: '200', unit: 'paires/an' },
-    { label: 'Années d\'expérience', value: '5', unit: 'ans' },
-    { label: 'Pays exportés', value: '4+', unit: 'marchés' },
-    { label: 'Employés qualifiés', value: '6', unit: 'artisans' },
+    { label: 'Capacité de production', value: '2000', unit: 'paires/an' },
+    { label: 'Années d\'expérience', value: '8', unit: 'ans' },
+    { label: 'Provinces exportées', value: '4+', unit: 'marchés' },
+    { label: 'Employés qualifiés', value: '10', unit: 'artisans' },
   ],
   image:
     'https://ik.imagekit.io/cy3dy3vcm/Niyo/WhatsApp%20Unknown%202026-07-06%20at%208.07.44%20PM/WhatsApp%20Image%202026-07-06%20at%203.04.26%20PM.jpeg?updatedAt=1783361919267',
@@ -224,6 +221,74 @@ export const events = [
       },
     ],
   },
+
+
+
+
+  {
+    id: 3,
+    slug: 'foire-donatus-conference-center-2026',
+    name: 'African Incubation Summit',
+    date: 'août 2026',
+    location: 'bujumbura, Burundi',
+    description: 'Exposition de notre savoir-faire artisanal et démonstration .de notre upcoming project (recyclage des déchets plastiques en talon des sandales).',
+    summary:
+      'Lors de la Foire Donatus Conference Center à Bujumbura, nous avons exposé notre processus de fabrication et nos dernières créations. Les visiteurs ont pu assister à des démonstrations en direct et échanger avec nos artisans.',
+    image:
+      'https://ik.imagekit.io/cy3dy3vcm/Niyo/event/donatus%20conference%20center/IMG_20260804_124815_HDR.jpg?updatedAt=1785910153498',
+    highlights: [
+      'Rencontre avec les artisans Niyo',
+      'Forte affluence du public local',
+    ],
+    gallery: [
+      {
+        id: 1,
+        src: 'https://ik.imagekit.io/cy3dy3vcm/Niyo/event/donatus%20conference%20center/IMG_20260804_124815_HDR.jpg?updatedAt=1785910153498',
+        alt: 'Stand à la foire artisanale de Bujumbura',
+        caption: 'Notre espace d\'exposition à Bujumbura',
+      },
+      {
+        id: 2,
+        src: 'https://ik.imagekit.io/cy3dy3vcm/Niyo/event/donatus%20conference%20center/IMG_20260804_111931_HDR.jpg?updatedAt=1785910382771',
+        alt: 'Artisans au travail pendant la foire',
+        caption: 'Démonstration du savoir-faire artisanal',
+      },
+      {
+        id: 3,
+        src: 'https://ik.imagekit.io/cy3dy3vcm/Niyo/event/donatus%20conference%20center/IMG_20260804_124841_HDR.jpg?updatedAt=1785910150517',
+        alt: 'Stand Niyo Shoes Factory au salon',
+        caption: 'Présentation de notre stand et de nos sandales.',
+      }
+
+    ],
+    videos: [],
+    moments: [
+      {
+        id: 1,
+        title: 'Démonstration en atelier',
+        description: 'Présentation des étapes de fabrication d\'une sandale en cuir.',
+        image:
+          'https://ik.imagekit.io/cy3dy3vcm/Niyo/event/donatus%20conference%20center/IMG_20260804_124815_HDR.jpg?updatedAt=1785910153498',
+        date: 'août 2026',
+      },
+      {
+        id: 2,
+        title: 'Échanges avec le public',
+        description: 'Rencontres enrichissantes avec les visiteurs et les artisans locaux.',
+        image:
+          'https://ik.imagekit.io/cy3dy3vcm/Niyo/event/donatus%20conference%20center/IMG_20260804_111931_HDR.jpg?updatedAt=1785910382771',
+        date: 'août 2026',
+      },
+      {
+        id: 3,
+        title: 'Présentation de la collection',
+        description: 'Découverte des dernières créations de la marque Niyo Shoes Factory.',
+        image:
+          'https://ik.imagekit.io/cy3dy3vcm/Niyo/event/donatus%20conference%20center/IMG_20260804_124841_HDR.jpg?updatedAt=1785910150517',
+        date: 'août 2026',
+      },
+    ],
+  },
 ]
 
 export const markets = [
@@ -276,6 +341,7 @@ export const gallery = {
     { id: 3, category: 'fabrication', src: 'https://ik.imagekit.io/cy3dy3vcm/Niyo/WhatsApp%20Unknown%202026-07-06%20at%208.07.44%20PM/WhatsApp%20Image%202026-07-06%20at%203.03.11%20PM.jpeg?updatedAt=1783361918949', alt: 'Processus de fabrication' },
     { id: 9, category: 'produits', src: 'https://ik.imagekit.io/cy3dy3vcm/Niyo/WhatsApp%20Unknown%202026-07-06%20at%208.07.37%20PM/WhatsApp%20Image%202026-07-06%20at%203.00.58%20PM.jpeg?updatedAt=1783361918956', alt: 'Collection été' },
     { id: 10, category: 'fabrication', src: 'https://ik.imagekit.io/cy3dy3vcm/Niyo/WhatsApp%20Unknown%202026-07-06%20at%208.07.37%20PM/WhatsApp%20Image%202026-07-06%20at%203.01.35%20PM.jpeg?updatedAt=1783361918287', alt: 'Finitions main' },
+    { id: 11, category: 'atelier', src: 'https://ik.imagekit.io/cy3dy3vcm/Niyo/WhatsApp%20Unknown%202026-07-06%20at%208.07.37%20PM/Screenshot_20260724-141418%20(1).png?updatedAt=1785812733419' },
   ],
 }
 

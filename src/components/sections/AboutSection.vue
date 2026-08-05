@@ -22,10 +22,10 @@ defineProps({
         </div>
 
         <div class="about__content">
-          <div class="about__block animate-on-scroll">
+          <!-- <div class="about__block animate-on-scroll">
             <h3>Notre histoire</h3>
             <p>{{ about.history }}</p>
-          </div>
+          </div> -->
           <div class="about__block animate-on-scroll">
             <h3>Notre mission</h3>
             <p>{{ about.mission }}</p>
