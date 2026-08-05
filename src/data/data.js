@@ -10,6 +10,24 @@ export const company = {
 export const hero = {
   backgroundImage:
     'https://ik.imagekit.io/cy3dy3vcm/Niyo/event/donatus%20conference%20center/IMG_20260804_124841_HDR.jpg?updatedAt=1785910150517',
+  backgroundImages: [
+    {
+      src: 'https://ik.imagekit.io/cy3dy3vcm/Niyo/event/donatus%20conference%20center/IMG_20260804_111607_HDR.jpg?updatedAt=1785910170519',
+      alt: 'Sandales Niyo Shoes Factory',
+    },
+    {
+      src: 'https://ik.imagekit.io/cy3dy3vcm/Niyo/WhatsApp%20Unknown%202026-07-06%20at%208.07.37%20PM/Screenshot_20260724-141418%20(1).png?updatedAt=1785812733419',
+      alt: 'Sandales artisanales pour homme',
+    },
+    {
+      src: 'https://ik.imagekit.io/cy3dy3vcm/Niyo/WhatsApp%20Unknown%202026-07-06%20at%208.07.44%20PM/WhatsApp%20Image%202026-07-06%20at%203.03.11%20PM.jpeg?updatedAt=1783361918949',
+      alt: 'Sandales écologiques fabriquées localement',
+    },
+    {
+      src: 'https://ik.imagekit.io/cy3dy3vcm/Niyo/event/donatus%20conference%20center/IMG_20260804_124841_HDR.jpg?updatedAt=1785910150517',
+      alt: 'Présentation de la collection Niyo Shoes Factory',
+    },
+  ],
   title: 'Niyo Shoes Factory',
   subtitle: 'Portez des chaussures niyo, marchez confortablement!',
   description:

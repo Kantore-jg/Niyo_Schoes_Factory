@@ -1,40 +1,66 @@
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue'
+import { computed, ref, onMounted, onUnmounted } from 'vue'
 import { RouterLink } from 'vue-router'
-import { hero, company } from '../../data/data.js'
+import { hero } from '../../data/data.js'
 import { useWhatsApp } from '../../composables/useWhatsApp.js'
 
 const { openWhatsApp } = useWhatsApp()
 const parallaxOffset = ref(0)
+const activeSlideIndex = ref(0)
+const reduceMotion = ref(false)
+let carouselTimer = null
+
+const slides = computed(() => {
+  if (hero.backgroundImages?.length) return hero.backgroundImages
+  return [{ src: hero.backgroundImage, alt: hero.title }]
+})
 
 const handleScroll = () => {
   parallaxOffset.value = window.scrollY * 0.4
 }
 
+const nextSlide = () => {
+  activeSlideIndex.value = (activeSlideIndex.value + 1) % slides.value.length
+}
+
+const goToSlide = (index) => {
+  activeSlideIndex.value = index
+}
+
 onMounted(() => {
   window.addEventListener('scroll', handleScroll, { passive: true })
+  reduceMotion.value = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+
+  if (slides.value.length > 1 && !reduceMotion.value) {
+    carouselTimer = window.setInterval(nextSlide, 5000)
+  }
 })
 
 onUnmounted(() => {
   window.removeEventListener('scroll', handleScroll)
+  if (carouselTimer) {
+    window.clearInterval(carouselTimer)
+  }
 })
 </script>
 
 <template>
   <section id="accueil" class="hero" aria-label="Accueil">
-    <div
-      class="hero__bg"
-      :style="{
-        backgroundImage: `url(${hero.backgroundImage})`,
-        transform: `translateY(${parallaxOffset}px)`,
-      }"
-      role="img"
-      :aria-label="hero.title"
-    />
+    <div class="hero__bg" aria-hidden="true">
+      <div
+        v-for="(slide, index) in slides"
+        :key="slide.src"
+        class="hero__bg-slide"
+        :class="{ 'is-active': index === activeSlideIndex }"
+        :style="{
+          backgroundImage: `url(${slide.src})`,
+          transform: `translateY(${parallaxOffset}px) scale(${index === activeSlideIndex ? 1.02 : 1.08})`,
+        }"
+      />
+    </div>
     <div class="hero__overlay" />
 
     <div class="hero__content container">
-      <!-- <img :src="company.logo" :alt="company.name" class="hero__logo" /> -->
       <h1 class="sr-only">{{ hero.title }}</h1>
       <p class="hero__subtitle">{{ hero.subtitle }}</p>
       <p class="hero__description">{{ hero.description }}</p>
@@ -45,11 +71,22 @@ onUnmounted(() => {
           {{ hero.ctaSecondary.label }}
         </button>
       </div>
+
+      <div v-if="slides.length > 1" class="hero__indicators" aria-label="Sélection des images du hero">
+        <button
+          v-for="(slide, index) in slides"
+          :key="slide.src"
+          class="hero__indicator"
+          :class="{ 'is-active': index === activeSlideIndex }"
+          type="button"
+          :aria-label="`Afficher l'image ${index + 1}`"
+          :aria-pressed="index === activeSlideIndex"
+          @click="goToSlide(index)"
+        />
+      </div>
     </div>
 
-    <div class="hero__scroll" aria-hidden="true">
-      <span />
-    </div>
+    
   </section>
 </template>
 
@@ -69,21 +106,34 @@ onUnmounted(() => {
   &__bg {
     position: absolute;
     inset: -20% 0 0;
-    background-size: cover;
-    background-position: center;
+    overflow: hidden;
+    background: linear-gradient(180deg, #08111f 0%, #0d1f33 100%);
     will-change: transform;
   }
 
-  // &__overlay {
-  //   position: absolute;
-  //   inset: 0;
-  //   background: linear-gradient(
-  //     135deg,
-  //     rgba(59, 36, 23, 0.75) 0%,
-  //     rgba(59, 36, 23, 0.45) 50%,
-  //     rgba(59, 36, 23, 0.65) 100%
-  //   );
-  // }
+  &__bg-slide {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition:
+      opacity 900ms ease,
+      transform 1200ms ease;
+    filter: saturate(1.05) contrast(1.02);
+
+    &.is-active {
+      opacity: 1;
+    }
+  }
+
+  &__overlay {
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(135deg, rgba(8, 17, 31, 0.78) 0%, rgba(8, 17, 31, 0.42) 45%, rgba(8, 17, 31, 0.72) 100%),
+      radial-gradient(circle at top, rgba(117, 167, 49, 0.2) 0%, transparent 42%);
+  }
 
   &__content {
     font-weight: bold;
@@ -133,6 +183,28 @@ onUnmounted(() => {
     flex-wrap: wrap;
   }
 
+  &__indicators {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 28px;
+  }
+
+  &__indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 999px;
+    border: 0;
+    padding: 0;
+    background: rgba($color-white, 0.35);
+    transition: all $transition;
+
+    &.is-active {
+      width: 30px;
+      background: $color-accent;
+    }
+  }
+
   &__scroll {
     position: absolute;
     bottom: 32px;
@@ -172,5 +244,14 @@ onUnmounted(() => {
 @keyframes scrollDown {
   0%, 100% { opacity: 1; transform: translateX(-50%) translateY(0); }
   50% { opacity: 0.3; transform: translateX(-50%) translateY(12px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__bg-slide,
+  .hero__content,
+  .hero__scroll span::after {
+    animation: none;
+    transition: none;
+  }
 }
 </style>
