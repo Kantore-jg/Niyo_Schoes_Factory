@@ -7,7 +7,7 @@ const routes = [
     name: 'home',
     component: HomeView,
     meta: {
-      title: 'Niyo Shoes Factory — Sandales en cuir artisanales | Gitega, Burundi',
+      title: 'Niyo Shoes Factory',
       description:
         'Fabricant de sandales en cuir haut de gamme à Gitega, Burundi. Collections homme et femme, savoir-faire artisanal depuis 2020. Livraison au Burundi et à l\'export.',
       canonicalPath: '/',
